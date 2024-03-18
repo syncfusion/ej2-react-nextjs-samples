@@ -1,0 +1,20 @@
+export const PivotViewSampleOrder: Object = [
+    { 'path': 'pivot-table/overview', 'component': 'PivotOverview', 'description': 'This sample shows an overview of Essential JS2 Pivot Table that allows to organize and summarize the pivot data in a detailed or abstract view.', 'name': 'Overview', 'order': '01', 'category': 'Pivot Table', 'api': '{"PivotViewComponent":["DataSource"] }' },
+    { 'path': 'pivot-table/default', 'component': 'Default', 'description': 'This demo for Essential JS2 Pivot Table control shows the basic rendering of the pivot table with minimum configuration', 'name': 'Default Functionalities', 'order': '01', 'category': 'Pivot Table', 'api': '{"PivotViewComponent":["DataSource"] }' },
+    { 'path': 'pivot-table/live-data', 'component': 'LiveData', 'description': 'This sample demonstrates how frequently the pivot table and the pivot chart are updated with real-time data at a given time interval.', 'name': 'Live Data', 'order': '01', 'category': 'Pivot Table', 'api': '{"PivotViewComponent":["DataSource"] }' },
+    {
+        'path': 'pivot-table/local', 'component': 'Local', 'description': 'This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with local JSON or CSV data', 'name': 'Local Data', 'order': '02', 'category': 'Data Binding', 'api': '{"PivotViewComponent":["DataSource"]}',
+        'sourceFiles': [
+            { 'displayName': 'local.tsx', 'path': '/nextjs/demos/src/pivot-table/local/page.tsx' },
+            { 'displayName': 'localData.json', 'path': '/nextjs/demos/src/pivot-table/pivot-data/rData.json' },
+            { 'displayName': 'csvData.json', 'path': '/nextjs/demos/src/pivot-table/pivot-data/csvData.ts' }
+        ]
+    },
+    { 'path': 'pivot-table/remote', 'component': 'Remote', 'description': 'This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with JSON or CSV remote data', 'name': 'Remote Data', 'order': '02', 'category': 'Data Binding', 'api': '{"PivotViewComponent":["DataSource"]}' },
+    { 'path': 'pivot-table/server-side-engine', 'component': 'ServerSideEngine', 'description': 'This sample demonstrates the ability to use an external pivot engine to bind and populate data from a remote service and display it in the pivot table.', 'name': 'Server-side Aggregation', 'order': '02', 'category': 'Data Binding', 'api': '{"PivotViewComponent":["DataSource"]}' },
+    { 'path': 'pivot-table/olap', 'component': 'OlapSample', 'description': 'This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with olap datasource', 'name': 'OLAP', 'order': '02', 'category': 'Data Binding', 'api': '{"PivotViewComponent":["DataSource"]}' },
+    { 'path': 'pivot-table/performance', 'component': 'Performance', 'description': 'This sample demonstrates how the pivot table loads a large amount of data with ease using virtual scrolling.', 'name': 'Performance', 'order': '03', 'category': 'Benchmark', 'api': '{"PivotViewComponent":["DataSource"] }' },
+    { 'path': 'pivot-table/pivot-chart', 'component': 'ChartIntegration', 'description': 'This demo for Essential JS2 Pivot Table control demonstrate integration of pivot table data into a simple pivot chart', 'name': 'Pivot Chart', 'order': '04', 'category': 'Integration', 'api': '{"PivotViewComponent":["DataSource"]}' },
+    { 'path': 'pivot-table/external-binding', 'component': 'Integration', 'description': 'This demo for Essential JS2 Pivot Table control demonstrate the rendering of chart with cell selection option', 'name': 'External Binding', 'order': '04', 'category': 'Integration', 'api': '{"PivotViewComponent":["DataSource"]}' },
+    { 'path': 'pivot-table/calculated-field', 'component': 'CalculatedFieldClass', 'description': 'This demo for Essential JS2 Pivot Table control shows calculated field, and it allows users to add calculated items', 'name': 'Calculated Field', 'order': '07', 'category': 'Formula', 'api': '{"PivotViewComponent":["DataSource"] }' }
+];

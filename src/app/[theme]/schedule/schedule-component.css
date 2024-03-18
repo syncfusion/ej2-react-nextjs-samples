@@ -1,0 +1,48 @@
+#EventLog b {
+  color: #388e3c;
+}
+
+hr {
+  margin: 1px 10px 1px 0px;
+  border-top: 1px solid #eee;
+}
+
+.year-property-panel td {
+  padding-bottom: 1rem;
+}
+
+
+.e-schedule .e-schedule-toolbar .e-icon-schedule-print::before {
+  content: '\e973';
+}
+
+.e-schedule .e-schedule-toolbar .e-icon-schedule-pdf::before {
+  content: '\e7c8';
+}
+
+.custom-field-row {
+  margin-bottom: 20px;
+}
+
+.multi-prop div {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.year-view.e-schedule .e-timeline-year-view .e-resource-column-table, .year-view.e-schedule .e-timeline-year-view .e-resource-left-td {
+  width: 120px;
+}
+
+.inline-edit.e-schedule .e-timeline-view .e-resource-left-td, .inline-edit.e-schedule .e-timeline-month-view .e-resource-left-td {
+  width: 150px;
+}
+
+.time-scale.e-schedule.e-device .e-vertical-view .e-left-indent,
+.time-scale.e-schedule.e-device .e-vertical-view .e-time-cells-wrap {
+    width: 50px;
+}
+
+.time-scale.e-schedule .e-timeline-view .e-date-header-wrap table col, 
+.time-scale.e-schedule .e-timeline-view .e-content-wrap table col {
+    width: 75px;
+}
