@@ -4,7 +4,38 @@ A Next.js sample browser has been implemented to demonstrate the seamless compat
 
 Explore the Syncfusion Next.js sample browser [here](https://ej2.syncfusion.com/nextjs/demos/).
 
-## Adding your component and sample folder
+## Installing
+
+Use the below command to install all dependent packages.
+
+```
+npm install
+```
+
+## Run the Sample Browser
+
+### Development Mode
+
+To run the sample browser in development mode, use the following command. This command will hot-reload the sample changes in the browser, so you don't need to rerun the command after making changes to the sample files.
+
+```
+npm run dev
+```
+> If you are adding new samples or components, you need to rerun this command to generate locale, and common sample configurations.
+
+### Production Mode
+
+Use the commands below to build the sample browser in production mode. These commands compile the source files and run the sample browser faster in the browser. If you make any changes to the sample file, you need to run the commands below again.
+
+```
+npm run build
+
+npm run start
+```
+
+## Next.js Sample Configuration
+
+### Adding your component and sample folder
 
 * In the Next.js sample browser, we utilize the built-in [app router](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) for sample navigation. Therefore, it's necessary to create a folder for each control in the "src/app/[theme]/" location. For instance, if you're adding a grid control, create a folder named "grid" in the "src/app/[theme]/" location.
 
@@ -23,7 +54,7 @@ src
 
 > Do not use whitespace at any cause in folder’s name. Use “-” instead of space.
 
-## Adding the sample code
+### Adding the sample code
 
 Add the sample component `page.tsx` file to the sample folder. The following steps need to be considered when creating a sample:
 
@@ -52,7 +83,7 @@ export default Default;
 ```
 Refer this [sample](https://github.com/syncfusion/ej2-nextjs-react-samples/blob/master/src/app/%5Btheme%5D/grid/default/page.tsx) for example sample component.
 
-## Adding property section
+### Adding property section
 
 To add  the "property pane”  in the sample, use the `PropertyPane` tag from "@/common/property-pane". Configure your sample properties as like below code snippet.
 
@@ -151,7 +182,7 @@ export let samplesList: any = [
 ];
 ```
 
-## Adding your control dependency
+### Adding your control dependency
 
 Add your dependency in `package.json` file inside the dependencies.
 
@@ -163,7 +194,7 @@ Add your dependency in `package.json` file inside the dependencies.
 },
 ```
 
-## Adding Images
+### Adding Images
 
 * Add your images in the `public/images` folder. For instance, if you're adding a grid control, create a folder named "grid" in the "public/images" location. Then add your images to the "grid" folder.
 
@@ -201,31 +232,4 @@ function Default() {
     </div>
   );
 }
-```
-
-## Installing
-
-Use the below command to install all dependent packages.
-
-```
-npm install
-```
-
-## Build and Run in Development Mode
-
-To run the sample browser in development mode, use the following command. This command will hot-reload the sample changes in the browser, so you don't need to rerun the command after making changes to the sample files.
-
-```
-npm run dev
-```
-> If you are adding new samples or components, you need to rerun this command to generate locale, and common sample configurations.
-
-## Build and Run in Production Mode
-
-Use the commands below to build the sample browser in production mode. These commands compile the source files and run the sample browser faster in the browser. If you make any changes to the sample file, you need to run the commands below again.
-
-```
-npm run build
-
-npm run start
 ```
