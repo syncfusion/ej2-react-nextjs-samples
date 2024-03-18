@@ -1,0 +1,216 @@
+.fabric .empimg{
+    background-color:#0078d6; 
+}
+.material .empimg{
+    background-color:#e3165b; 
+}
+.highcontrast .empimg{
+    background-color:#ffd939; 
+}
+_:-ms-fullscreen, :root .highcontrast .e-userimg.sf-icon-Male::before,
+_:-ms-fullscreen, :root .highcontrast .e-userimg.sf-icon-FeMale::before{
+    color: black;
+}
+.highcontrast .e-userimg.sf-icon-Male::before,
+.highcontrast .e-userimg.sf-icon-FeMale::before{       
+    color: black;
+}
+.bootstrap .empimg{
+    background-color:#0078d6; 
+}
+
+.bootstrap4 .empimg,
+.bootstrap5 .empimg {
+    background-color:#0078d6; 
+}
+
+.tailwind .empimg{
+    background-color:#4f46e5;  
+}
+
+.fluent .empimg{
+    background-color:#106EBE;
+}
+
+#Emptext{
+top: -12px;
+left: 41px;
+position: relative;
+}
+.empimg{
+height: 27px;
+width: 29px;
+border-radius: 14px;
+background-color:#e3165b;
+}
+#overviewgrid.e-rtl #Emptext{
+    top: -12px;
+    left: -41px;
+    position: relative;
+}
+
+.e-userimg.sf-icon-Male::before,
+.e-userimg.sf-icon-FeMale::before{
+    font-size: 13px;
+}
+.e-userimg.sf-icon-Male, .e-userimg.sf-icon-FeMale {  
+    margin: 0px 8px;
+    line-height: 26px;
+    color: white; 
+    font-size: 13px;
+}
+
+.e-userimg.sf-icon-Male::before{
+    content: '\e700';      
+}
+.e-userimg.sf-icon-FeMale::before{
+    content: '\e701';      
+}
+
+
+.highcontrast #overviewgrid td.e-rowcell.e-selectionbackground.e-active {
+    background-color: transparent;
+    color: white;
+}
+
+.e-bigger #overviewgrid .statustxt{
+    position: relative;
+}
+
+#overviewgrid td.e-rowcell.e-selectionbackground.e-active {
+    background-color: transparent;
+}
+
+.Mapimage .e-image {
+    height: 13px;
+    width: 14px;
+}
+
+td.e-rowcell .statustxt.e-activecolor {
+    color: #00cc00;
+    position: relative;
+    top: 9px;
+}
+
+td.e-rowcell .statustxt.e-inactivecolor {
+    color: #e60000;
+    position: relative;
+    top: 9px;
+}
+
+.bootstrap5 td.e-rowcell .statustxt.e-inactivecolor,
+.bootstrap5 td.e-rowcell .statustxt.e-activecolor {
+  top: 8px;
+}
+
+.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+  position: relative;
+  top: 1.5px;
+}
+
+.e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+.e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+  top: -0.5px;
+}
+
+.bootstrap5 .e-checkboxfiltertext #Trusttext {
+  margin-left: -4px;
+}
+
+.statustemp.e-inactivecolor {
+    background-color: #ffd7cc;
+    width: 64px;
+}
+
+.statustemp.e-activecolor {
+    background-color: #ccffcc;
+    width: 57px;
+}
+
+.statustxt.e-activecolor {
+    color: #00cc00;
+}
+
+.statustxt.e-inactivecolor {
+    color: #e60000;
+}
+
+.statustemp {
+    position: relative;
+    height: 19px;
+    border-radius: 5px;
+    text-align: center
+}
+
+.highcontrast #msg {
+    color: #FFFFFF
+}
+
+#msg {
+    font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.95;
+    color: #333;
+    float: right;
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 370px) {
+    #msg {           
+        float: left;
+        margin-top: 3px;
+    }
+    #overviewgrid{
+        margin-top:36px;
+    }
+}
+
+#samplecontainer {
+    padding-top: 5px;
+}
+
+#myProgress {
+    position: relative;
+    height: 18px;
+    width: 10em;
+    text-align: left;
+    background-color: white;
+  }
+  .highcontrast #overviewgrid #myProgress{
+    background-color: black;
+  }
+  
+  #myBar {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #00b300;
+  }
+  #myBar.progressdisable {
+    background-color: #df2222;
+  }
+  #pbarlabel {
+    position: relative;
+    left:10px;
+    line-height: 18px;
+    font-size: 11px;
+    color: white;
+  }
+  .custom-rating.e-rating-container .e-rating-item-container ,
+  .e-bigger .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon,
+  .e-bigger.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+      font-size: 11px;
+  }
+  .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+      -webkit-text-fill-color: lightgrey;
+      -webkit-text-stroke: 1px lightgrey;
+   }
+
+   .custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
+      background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #ffa600;
+   }

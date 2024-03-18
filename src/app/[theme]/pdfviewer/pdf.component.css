@@ -1,0 +1,270 @@
+#pdfviewer {
+    height: 640px;
+}
+
+#magnificationToolbar {
+    background: transparent;
+    height: auto;
+    min-height: 56px;
+    width: auto;
+    border: none;
+    position: absolute;
+    z-index: 900;
+    top: calc(100% - 140px);
+    left: calc(100% - 150px);
+    transform: rotate(90deg);
+}
+
+div#magnificationToolbar.e-toolbar .e-toolbar-items {
+    background: transparent;
+    padding: 2px 3px 2px 2px;
+}
+
+#magnificationToolbar.e-toolbar .e-tbar-btn {
+    border-radius: 50%;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid #c8c8c8;
+}
+
+#customToolbar {
+    top: 20px;
+    z-index: 900;
+}
+
+.e-bookmark-popup {
+    height: 300px;
+    max-width: 300px;
+}
+
+.e-text-search-popup {
+    height: 104px;
+    max-width: 348px;
+}
+
+.e-custom-search-input {
+    width: 234px;
+}
+
+.e-text-search-popup .e-footer-content,
+.e-bookmark-popup .e-footer-content {
+    padding: 0;
+    height: 0;
+}
+
+.search-button,
+.search-button:disabled,
+.search-button:focus,
+.search-button:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+#popup .e-dlg-content {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.e-pv-bookmarks {
+    min-width: 234px;
+}
+
+.e-pv-current-page-number {
+    width: 46px;
+    height: 28px;
+    text-align: center;
+}
+
+.material .e-pv-current-page-number {
+    border-width: 1px;
+}
+
+.e-btn-icon.e-pv-zoom-out-icon.e-icons {
+    transform: rotate(90deg);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.render-mode-info {
+    background: none;
+    border: none;
+    padding-left: 0px;
+}
+
+.render-mode-info .render-mode-info-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.switchLabel {
+    font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;        
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.render-mode-info .render-mode-info-icon::before {
+    line-height: 0.5rem;
+}
+
+.buttonSwitch {
+    Width: 40px;
+    Height: 24px;
+}
+
+.pdfviewer-document-list{
+
+    #defaultDialog {
+        left: 23%;
+        top: 0% ! important;
+    }
+    
+    #targetElement .dlgbtn {
+        margin-right: 10px;
+    }
+    
+    @media screen and (min-width: 150px) and (max-width: 480px) {
+        .control-section {
+            margin-bottom: 30px;
+        }
+    
+        .control-wrapper {
+            margin-bottom: 0px;
+        }
+    }
+    
+    #defaultDialog .form-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.70);
+    }
+    
+    #defaultDialog .e-error,
+    #defaultDialog .e-float-text {
+        font-weight: 500;
+    }
+    
+    #defaultDialog .e-custom-label {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+    
+    #defaultDialog #formId {
+        padding-top: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
+        border-radius: 5px;
+        background: #f9f9f9;
+        height: 250px;
+        overflow-y: scroll;
+    }
+    
+    .material-dark #defaultDialog #formId,
+    .material3-dark #defaultDialog #formId,
+    .bootstrap5-dark #defaultDialog #formId {
+        background: #212529;
+    }
+    
+    .bootstrap-dark #defaultDialog #formId {
+        background: #1a1a1a;
+    }
+    
+    .fabric-dark #defaultDialog #formId {
+        background: #201f1f;
+    }
+    
+    .tailwind-dark #defaultDialog #formId {
+        background: #1f2937;
+    }
+    
+    .fluent-dark #defaultDialog #formId {
+        background: #111111;
+    }
+
+    .e-pv-fit-page-icon::before {
+        content: '\e91b';
+        font-family: "e-icons";
+    }
+   
+    
+    .material-dark #defaultDialog .form-title,
+    .material3-dark #defaultDialog .form-title,
+    .bootstrap-dark #defaultDialog .form-title,
+    .fabric-dark #defaultDialog .form-title,
+    .tailwind-dark #defaultDialog .form-title,
+    .bootstrap5-dark #defaultDialog .form-title,
+    .fluent-dark #defaultDialog .form-title {
+        color: rgb(249 249 249);
+    }
+    
+    .highcontrast #defaultDialog form,
+    .highcontrast #defaultDialog .header {
+        color: #fff;
+        background: #000000;
+    }
+    
+    #defaultDialog .header {
+        color: rgba(0, 0, 0, 0.7);
+    }
+    
+    #defaultDialog .form-horizontal .form-group {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+    
+    #defaultDialog .e-submit-btn {
+        height: 40px;
+        width: 150px;
+    }
+    
+    #defaultDialog .e-reset-btn {
+        height: 40px;
+        width: 150px;
+    }
+    
+    #defaultDialog .submitRow {
+        width: 320px;
+        margin: 0px auto;
+        height: 100px;
+        padding-top: 25px;
+    }
+    
+    #defaultDialog #DialogChart {
+        text-align: center;
+    }
+    
+    #defaultDialog {
+        max-height: 500px;
+    }
+    
+    .file-name-container {
+        display: flex;
+        justify-content: left;
+    }
+    
+    .file-name-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icon-and-text {
+        display: flex;
+        align-items: left;
+    }
+    
+    .file-name-text {
+        text-align: center;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,4 @@
+span.e-input-group.e-ddl[aria-controls="ddlelement_popups"],
+span.e-input-group.e-ddl[aria-controls="ddlelement"] {
+    margin-right: 15px;
+}

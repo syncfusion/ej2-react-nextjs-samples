@@ -1,0 +1,115 @@
+.e-treegrid .e-image {
+    height: 13px;
+    width: 14px;
+    vertical-align: middle;
+}
+
+.statustemp {
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #C3F1D0;
+    color: #00752F;
+    width: 47px;
+    height: 22px;
+}
+
+.statustemp.e-lowgdp {
+    background-color: #FFDBDB;
+    color: #BD0000;
+
+}
+
+td.e-rowcell .statustxt {
+    color: #398120;
+    position: relative;
+}
+
+td.e-rowcell .statustxt.e-lowgdp {
+    color: #e60000;
+    position: relative;
+}
+
+.negativeTimeZone {
+    transform: rotate(180deg);
+}
+
+#myBar {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #00b300;
+}
+
+#myBar.progressdisable {
+    background-color: #df2222;
+}
+
+#treegridlabel {
+    position: relative;
+    left: 10px;
+    line-height: 18px;
+    font-size: 10px;
+    color: white;
+}
+
+.highcontrast .e-grid #myProgress {
+    background-color: whitesmoke;
+}
+
+#myProgress {
+    position: relative;
+    height: 18px;
+    width: 10em;
+    text-align: left;
+    background-color: whitesmoke;
+}
+
+#myBar.progressdisable {
+    background-color: #df2222;
+}
+
+#coordinates .e-image {
+    filter: brightness(180%);
+}
+
+.material3-dark .rating .star.checked,
+.material3 .rating .star.checked {
+    color: #6750A4;
+}
+
+.material3-dark #myBar,
+.material3 #myBar {
+    background-color: #53CA17;
+}
+
+.material3-dark #myBar.progressdisable,
+.material3 #myBar.progressdisable {
+    background-color: rgba(242, 184, 181, 1);
+}
+
+.custom-rating.e-rating-container .e-rating-item-container,
+.e-bigger .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon,
+.e-bigger.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+    font-size: 11px;
+}
+
+.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+    -webkit-text-fill-color: lightgrey;
+    -webkit-text-stroke: 1px lightgrey;
+}
+
+.custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
+    background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #ffa600;
+}
+
+#pbarlabel {
+    position: relative;
+    left: 10px;
+    line-height: 18px;
+    font-size: 10px;
+    color: white;
+}

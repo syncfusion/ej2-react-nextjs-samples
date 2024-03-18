@@ -1,0 +1,19 @@
+.e-pivotview {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    #pivot-table-section {
+        overflow: auto;
+    }
+}
+
+#PivotViewcontainerwrapper {
+    height: auto !important;
+}
+
+.e-pivotview .e-pivotchart-type-dialog {
+    max-width: 380px !important;
+    max-height: 380px !important;
+ }
