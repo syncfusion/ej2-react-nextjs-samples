@@ -1,8 +1,16 @@
 # Next.js Sample Browser
 
-A Next.js sample browser has been implemented to demonstrate the seamless compatibility and easy integration of Syncfusion React components. It is built using the Next.js framework, which provides server-side rendering and generates static websites for React applications.
+A Next.js sample browser has been implemented to demonstrate the seamless compatibility and easy integration of Syncfusion React components. It is built using the Next.js framework, which provides server-side rendering and generates static websites for React applications. Explore the Syncfusion Next.js sample browser [here](https://ej2.syncfusion.com/nextjs/demos/).
 
-Explore the Syncfusion Next.js sample browser [here](https://ej2.syncfusion.com/nextjs/demos/).
+To create a new Next.js application, refer to the Syncfusion Next.js [getting started documentation](https://ej2.syncfusion.com/react/documentation/getting-started/nextjs).
+
+> **Note:** After running the application, the license banner will pop up in the browser. To remove the license banner, [generate the license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation) and [register](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) it in the application.
+
+## Prerequisites
+
+* Node.js 18.17 or later.
+
+* The application is compatible with macOS, Windows, and Linux operating systems.
 
 ## Installing
 
