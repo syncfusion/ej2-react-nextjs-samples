@@ -1,0 +1,101 @@
+'use client';
+import { useRef } from 'react';
+import { DashboardLayoutComponent, PanelModel } from '@syncfusion/ej2-react-layouts';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import './default.component.css';
+
+
+const Default = () => {
+    
+    const dashboardObj = useRef<DashboardLayoutComponent>(null);
+    const cellSpacing: number[] = [5, 5];
+    let count: number = 8;
+
+    const onCloseIconHandler = (event: any): void => {
+        let panel: any = event.target;
+        if (panel.offsetParent) {
+            dashboardObj.current.removePanel(panel.offsetParent.id);
+        }
+    }
+    
+    const btnClick = (): void => {
+        let panel: PanelModel[] = [{
+            'id': count.toString() + '_layout', 'sizeX': 1, 'sizeY': 1, 'row': 0, 'col': 0,
+            content: '<span id="close" class="e-close-icon e-clear-icon"></span><div class="text-align">' + count.toString() + '</div>'
+        }];
+        (dashboardObj as any).current.addPanel(panel[0]);
+        let closeIcon : any = document.getElementById(count.toString() + '_layout').querySelector('.e-clear-icon');
+        closeIcon.addEventListener('click', onCloseIconHandler.bind(this));
+        count = count + 1;
+    }
+
+    return (
+        <div>
+            <div id="default_target" className="control-section">
+                <div className="addContainer">
+                    <ButtonComponent id="add" cssClass="e-info" onClick={ btnClick.bind(this) }>Add Panel</ButtonComponent>
+                </div>
+                <DashboardLayoutComponent id="default_dashboard" columns={5} ref={dashboardObj} cellSpacing={cellSpacing} allowResizing={true}>
+                    <div id="one" className="e-panel" data-row="0" data-col="0" data-sizeX="1" data-sizeY="1">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">0</div>
+                        </div>
+                    </div>
+                    <div id="two" className="e-panel" data-row="1" data-col="0" data-sizeX="1" data-sizeY="2">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">1</div>
+                        </div>
+                    </div>
+                    <div id="three" className="e-panel" data-row="0" data-col="1" data-sizeX="2" data-sizeY="2">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">2</div>
+                        </div>
+                    </div>
+                    <div id="four" className="e-panel" data-row="2" data-col="1" data-sizeX="1" data-sizeY="1">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">3</div>
+                        </div>
+                    </div>
+                    <div id="five" className="e-panel" data-row="2" data-col="2" data-sizeX="2" data-sizeY="1">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">4</div>
+                        </div>
+                    </div>
+                    <div id="six" className="e-panel" data-row="0" data-col="3" data-sizeX="1" data-sizeY="1">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">5</div>
+                        </div>
+                    </div>
+                    <div id="seven" className="e-panel" data-row="1" data-col="3" data-sizeX="1" data-sizeY="1">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">6</div>
+                        </div>
+                    </div>
+                    <div id="eight" className="e-panel" data-row="0" data-col="4" data-sizeX="1" data-sizeY="3">
+                        <span id="close" className="e-close-icon e-clear-icon" onClick={onCloseIconHandler.bind(this)} />
+                        <div className="e-panel-container">
+                            <div className="text-align">7</div>
+                        </div>
+                    </div>
+                </DashboardLayoutComponent>
+            </div>
+            <div id="action-description">
+                <p>This <a href="https://www.syncfusion.com/react-ui-components/react-dashboard-layout">React Dashboard Layout</a> example demonstrates the default functionalities of the DashboardLayout component. Click the Add Panel button to add panels dynamically to the dashboard layout.</p>
+            </div>
+            <div id="description">
+                <p>
+                    The DashboardLayout component provides the capability to arrange, <a href="https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowresizing" target="_blank">resize</a> and 
+                    reorder the panels within the dashboard layout.
+                </p>
+            </div>
+        </div>
+    );
+}
+export default Default;

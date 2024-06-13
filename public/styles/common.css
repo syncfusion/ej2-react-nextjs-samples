@@ -145,6 +145,16 @@ e-listview .e-icon-wrapper .e-list-text {
     width: calc(100% - 65px)
 }
 
+.light-theme:before,
+.pane-light-theme:before {
+    content: '\e930';
+}
+
+.dark-theme:before,
+.pane-dark-theme:before {
+    content: '\e931';
+}
+
 .sb-icon-Search:before {
     content: '\e921';
 }
@@ -292,7 +302,7 @@ div#sample-header {
 }
 
 .sb-search-wrapper {
-    padding: 0px 10px 0px 24px;
+    padding: 0px 10px 0px 13px;
 }
 
 .sb-search-btn,
@@ -306,7 +316,9 @@ div#sample-header {
 .sb-search-btn:hover,
 .sb-search-btn.active,
 .sb-setting-btn:hover,
-.sb-setting-btn.active {
+.sb-setting-btn.active,
+.sb-themeswitch-btn:active,
+.sb-themeswitch-btn:hover {
     background-color: #d8d8d8;
 }
 
@@ -430,7 +442,7 @@ div#sample-header {
     height: 32px;
     width: 150px;
     margin-top: 5px;
-    cursor: pointer;
+    cursor: default;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -829,7 +841,7 @@ div#sample-header {
 
 .e-samplestatus.new,
 .e-samplestatus.New {
-    background-color: #1d8739;
+    background-color: #1d8739 ;
 }
 
 .e-samplestatus.update,
@@ -837,7 +849,7 @@ div#sample-header {
     background-color: #fff;
     /* height: 23px !important; */
     border: 1px solid #1d8739 !important;
-    color: #1d8739  !important;
+    color: #1d8739 !important;
 }
 
 .e-samplestatus.preview,
@@ -979,6 +991,7 @@ div#sample-header {
     overflow-y: auto;
     top: 66px;
     -webkit-overflow-scrolling: touch;
+    border: none;
 }
 
 .sb-left-back {
@@ -1583,6 +1596,29 @@ propertye pane
 
     .sb-icon-Palette:before {
         font-size: 25px;
+    }
+
+    .mode-label {
+        width: 119px;
+        height: 16px;
+        margin-left: 6px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+    }
+    
+    .pane-dark-theme,
+    .pane-light-theme {
+        width: 16px;
+        height: 16px;
+        font-size: 18px;
+        margin-top: -5px;
+    }
+
+    .theme-mode-label {
+        display: flex;
+        column-gap: 8px;
+        margin-bottom: 10px;
     }
 
     .sb-setting-text {
@@ -2597,13 +2633,29 @@ RTE toolbar not visible in fullscreen
     width: 50%;
 }
 
-
-/* API tab anchor links color */
-
-code {
-    color: #9d1d3e;
+.sb-themeswitch-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1px;
+    margin-left: 5px;
+    background: transparent;
+    border: none;
+    height: 32px;
+    padding: 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+}
+.sb-themeswitch-btn .sb-icons {
+    margin-right: 5px;
+    font-size: 15px;
+    margin-top: -1.5px;
 }
 
-a {
-    color: #3072ac;
+.sb-theme-splitter {
+    float: left;
+    border-left: 1px solid rgb(196, 196, 196);
+    height: 32px;
+    margin-left: 15px;
 }

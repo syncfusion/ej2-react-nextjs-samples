@@ -38,5 +38,21 @@ export const ChartSampleOrder: Object = [
     {
         'path': 'chart/rounded-column', 'component': 'RoundedColumn', 'name': 'Rounded Column', 'order': '04', 'category': 'Bar Charts',
         'description': 'This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the rounded column series.'
+    },
+    {
+        'path': 'chart/update-spline', 'component': 'UpdateSpline', 'name': 'Spline updating each second', 'order': '11', 'category': 'Real-time Charts',
+        'description': 'This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the real time charts.', 'type': 'new'
+    },
+    {
+        'path': 'chart/live-stock-data', 'component': 'LiveStock', 'name': 'Live stock data', 'order': '11', 'category': 'Real-time Charts',
+        'description': 'This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the real time charts.', 'type': 'new'
+    },
+    {
+        'path': 'chart/update-data-source', 'component': 'UpdateDataSource', 'name': 'Update data source', 'order': '11', 'category': 'Real-time Charts',
+        'description': 'This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the real time charts.', 'type': 'new'
+    },
+    {
+        'path': 'chart/click-add-point', 'component': 'ClickAddPoint', 'name': 'Click to add a point', 'order': '11', 'category': 'Real-time Charts',
+        'description': 'This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the real time charts.', 'type': 'new'
     }
 ];

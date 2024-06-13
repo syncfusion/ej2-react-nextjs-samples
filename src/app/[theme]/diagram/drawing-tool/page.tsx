@@ -29,6 +29,7 @@ import {
   ChangeEventArgs
 } from "@syncfusion/ej2-react-buttons";
 import { useEffect } from "react";
+import { base_path } from "@/common/utils";
 
 let node: NodeModel;
 let diagramInstance: DiagramComponent;
@@ -305,7 +306,7 @@ function DrawingTools() {
       | ImageModel
       | TextModel
       | ConnectorModel;
-    drawingshape = { type: "Image", source: "/nextjs/demos/images/diagram/employee.png" };
+    drawingshape = { type: "Image", source: base_path + "/images/diagram/employee.png" };
     node = {
       shape: drawingshape
     };
@@ -428,7 +429,7 @@ function DrawingTools() {
               id="shape1"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/basicshape/DrawingTool_1.png')",
+                  `url('${base_path}/images/diagram/drawingTool/basicshape/DrawingTool_1.png')`,
                 marginRight: "3px"
               }}
             />
@@ -438,7 +439,7 @@ function DrawingTools() {
               id="shape2"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/basicshape/DrawingTool_2.png')",
+                  `url('${base_path}/images/diagram/drawingTool/basicshape/DrawingTool_2.png')`,
                 margin: "0px 3px"
               }}
             />
@@ -448,7 +449,7 @@ function DrawingTools() {
               id="shape3"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/basicshape/DrawingTool_3.png')"
+                  `url('${base_path}/images/diagram/drawingTool/basicshape/DrawingTool_3.png')`
               }}
             />
           </div>
@@ -459,7 +460,7 @@ function DrawingTools() {
               id="shape4"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/basicshape/DrawingTool_4.png')",
+                  `url('${base_path}/images/diagram/drawingTool/basicshape/DrawingTool_4.png')`,
                 marginRight: "3px"
               }}
             />
@@ -469,7 +470,7 @@ function DrawingTools() {
               id="shape5"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/basicshape/DrawingTool_5.png')",
+                  `url('${base_path}/images/diagram/drawingTool/basicshape/DrawingTool_5.png')`,
                 margin: "0px 3px"
               }}
             />
@@ -479,7 +480,7 @@ function DrawingTools() {
               id="path"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/DrawingTool_6.png')"
+                  `url('${base_path}/images/diagram/drawingTool/DrawingTool_6.png')`
               }}
             />
           </div>
@@ -490,7 +491,7 @@ function DrawingTools() {
               id="image"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/DrawingTool_7.png')",
+                  `url('${base_path}/images/diagram/drawingTool/DrawingTool_7.png')`,
                 marginRight: "3px"
               }}
             />
@@ -500,7 +501,7 @@ function DrawingTools() {
               id="svg"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/DrawingTool_8.png')",
+                  `url('${base_path}/images/diagram/drawingTool/DrawingTool_8.png')`,
                 marginRight: "3px"
               }}
             />
@@ -510,7 +511,7 @@ function DrawingTools() {
               id="text"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/DrawingTool_9.png')",
+                  `url('${base_path}/images/diagram/drawingTool/DrawingTool_9.png')`,
                 marginRight: "3px"
               }}
             />
@@ -524,7 +525,7 @@ function DrawingTools() {
               id="straight"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/connector/Connectors_1.png')",
+                  `url('${base_path}/images/diagram/drawingTool/connector/Connectors_1.png')`,
                 marginRight: "3px"
               }}
             />
@@ -533,7 +534,7 @@ function DrawingTools() {
               id="ortho"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/connector/Connectors_2.png')",
+                  `url('${base_path}/images/diagram/drawingTool/connector/Connectors_2.png')`,
                 margin: "0px 3px"
               }}
             />
@@ -542,7 +543,7 @@ function DrawingTools() {
               id="cubic"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/drawingTool/connector/Connectors_3.png')"
+                  `url('${base_path}/images/diagram/drawingTool/connector/Connectors_3.png')`
               }}
             />
           </div>
@@ -552,7 +553,7 @@ function DrawingTools() {
               id="freehand"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/connector/freehand.png')"
+                  `url('${base_path}/images/diagram/connector/freehand.png')`
               }}
             />
           </div>

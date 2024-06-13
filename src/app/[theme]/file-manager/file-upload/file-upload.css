@@ -1,0 +1,39 @@
+.fileupload {
+    max-width: 500px;
+    margin: auto;
+}
+#openBtn {
+    position: absolute;
+    top: 34px;
+    left: 43%;
+}
+#target {
+    height: 550px;
+}
+#dialog {
+    top: 20px !important;
+    max-height: 500px !important;
+}
+
+#uploadFileManager .e-file-drop, #uploadFileManager .e-css.e-btn {
+    display: none;
+}
+
+.tailwind #openBtn,
+.tailwind-dark #openBtn {
+    top: 28px;
+}
+
+.bootstrap #openBtn,
+.bootstrap-dark #openBtn {
+    top: 30px;
+}
+
+.bootstrap5 #openBtn,
+.bootstrap5-dark #openBtn {
+    top: 26px;
+}
+
+#uploadFileManager .e-upload .e-file-select-wrap{
+    display: block;
+}

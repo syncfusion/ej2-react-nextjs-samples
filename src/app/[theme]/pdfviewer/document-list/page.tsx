@@ -1,12 +1,11 @@
 'use client';
-import * as React from 'react';
 import { useRef, useState } from 'react';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { GridComponent, ColumnsDirective, ColumnDirective,CommandColumn } from '@syncfusion/ej2-react-grids';
 import { gridData } from '../data';
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, Inject
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 import '../pdf.component.css';
@@ -23,6 +22,7 @@ function DocumentList () {
   function buttonClick (args): void {
     var viewer = (document.getElementById('container') as any).ej2_instances[0];
     viewer.documentPath=args.rowData.Url;
+    dialogInstance.current.header=args.rowData.FileName;
     if(args.commandColumn.buttonOption.title=='View'){
       setDialogOpen(true);
       setGridOpen(false);
@@ -54,6 +54,8 @@ function DocumentList () {
 
       viewer.annotationSettings = { isLock: true };
       viewer.enableStickyNotesAnnotation = false;
+      viewer.toolbar.showAnnotationToolbar(false);
+      viewer.isFormDesignerToolbarVisible = false;
       viewer.contextMenuOption = "None";
       viewer.toolbarSettings = {
         showTooltip: true,
@@ -111,14 +113,17 @@ function DocumentList () {
   }
 }  
 
+function destroyed (): void{
+  viewer.destroy();
+  dialogInstance.current.destroy();
+}
+
   function dialogClose (): void {
-    setDialogOpen(false);
-    
+    setDialogOpen(false);    
   }
 
   function dialogOpen (): void {
-    setDialogOpen(true);
-    
+    setDialogOpen(true);    
   }
 
   function change(args : any): void {
@@ -141,7 +146,7 @@ function DocumentList () {
             <SwitchComponent cssClass="buttonSwitch" id="checked" change={change} checked={true}></SwitchComponent>
           </div>
         </div>        
-          <GridComponent ref={gridInstance} dataSource={gridData} commandClick={buttonClick}>
+          <GridComponent ref={gridInstance} dataSource={gridData} commandClick={buttonClick} destroyed={destroyed}>
             <ColumnsDirective>
               <ColumnDirective headerText='File Name' headerTextAlign='Left'
                 template={(props: any) => (
@@ -167,10 +172,10 @@ function DocumentList () {
             <Inject services={[CommandColumn]}></Inject>
           </GridComponent>
         
-        <DialogComponent id="defaultDialog" showCloseIcon={true} ref={dialogInstance} visible={isDialogOpen} width={'90%'} height={'90%'} isModal={true} header="Syncfusion Components inside Dialog" open={dialogOpen} close={dialogClose}>
+          <DialogComponent id="defaultDialog" showCloseIcon={true} ref={dialogInstance} visible={isDialogOpen} minHeight={'90%'} width={'90%'} height={'90%'} isModal={true} open={dialogOpen} close={dialogClose}>
           <div className='control-section'>
             <PdfViewerComponent ref={(scope) => { viewer = scope; }} style={{ 'height': '735px' }} id="container" resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib" >
-              <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]} />
+              <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
             </PdfViewerComponent>
           </div>
         </DialogComponent>

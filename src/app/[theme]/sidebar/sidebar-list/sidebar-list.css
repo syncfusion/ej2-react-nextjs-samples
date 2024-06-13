@@ -1,0 +1,252 @@
+ /* Specifies sample level styles for Sidebar */
+ #sblist-wrapper .listcontent {
+    font-size: 14px;
+    padding: 15px;
+}
+
+#sblist-wrapper.control-section {
+    padding: 0;
+}
+
+#sblist-wrapper .listmaincontent {
+    height: 380px;
+}
+
+#sblist-wrapper #left {
+    float: left;
+    width: 30px;
+    height: 47px;
+}
+
+#sblist-wrapper .sidebar-list {
+    z-index: 20 !important;
+}
+
+/*Specifies sample level style for Toolbar*/
+#sblist-wrapper .e-toolbar .e-icons {
+    font-size: 20px;
+}
+
+#sblist-wrapper .e-tbar-menu-icon:before {
+    content: "\e914";
+    font-family: 'sbicons';
+}
+
+/* Specifies the border bottom styles for toolbar in light theme*/
+.material #sblist-wrapper .e-toolbar,
+.tailwind #sblist-wrapper .e-toolbar,
+.bootstrap5 #sblist-wrapper .e-toolbar {
+    border-bottom: 1px solid #eaeaeae0;
+}
+
+/* Specifies the border bottom styles for toolbar in dark theme*/
+.bootstrap5-dark #sblist-wrapper .e-toolbar,
+.tailwind-dark #sblist-wrapper .e-toolbar,
+.material-dark #sblist-wrapper .e-toolbar {
+    border-bottom: 1px solid #eaeaea63;
+}
+
+.material #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.material-dark #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap4.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.tailwind.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.tailwind-dark.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 12px;
+}
+
+.e-bigger.material #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 16px;
+}
+
+.bootstrap4 #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap-dark #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap5.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap5-dark.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 8px;
+}
+
+.bootstrap5 #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap5-dark #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 5px;
+}
+
+.bootstrap.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child,
+.bootstrap-dark.e-bigger #sblist-wrapper .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 10px;
+}
+
+.e-folder {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px
+}
+
+.e-bigger .e-folder {
+    font-size: 18px;
+}
+
+.bootstrap5 .e-folder-name,
+.bootstrap5-dark .e-folder-name {
+    margin-top: -2px;
+}
+
+.tailwind .e-folder-name,
+.tailwind-dark .e-folder-name,
+.bootstrap4 .e-folder-name,
+.bootstrap .e-folder-name,
+.bootstrap-dark .e-folder-name {
+    margin-top: 3px;
+    margin-left: 7px;
+}
+
+.material .e-folder-name,
+.material-dark .e-folder-name {
+    margin-top: 1px;
+    margin-left: 9px;
+}
+
+/*Specifies sample level style for ListView*/
+.bootstrap5 .e-template-list,
+.bootstrap5-dark .e-template-list,
+.tailwind .e-template-list,
+.tailwind-dark .e-template-list,
+.material3 .e-template-list,
+.material3-dark .e-template-list,
+.bootstrap4 .e-template-list {
+    border: 0;
+    border-radius: 0;
+}
+
+.e-template-list .e-list-item {
+    line-height: 1.5;
+    padding: 0 16px;
+}
+
+#sidebarList {
+    display: inline-flex;
+    width: 100%;
+}
+
+.e-bigger #sidebarList {
+    padding-left: 8px;
+}
+
+#sidebarList .text {
+    padding-left: 14px;
+}
+
+.e-bigger #sidebarList .text {
+    padding-left: 20px;
+}
+
+.e-listbox-wrapper #sidebarList .text {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#sidebarList .e-avatar {
+    background-color: transparent;
+    float: left;
+}
+
+/* Specifies the background color of listview in dark theme*/
+ .material-dark #sblist-wrapper .e-list-item,
+.bootstrap-dark #sblist-wrapper .e-list-item {
+    background-color: transparent;
+}
+
+.material #sidebarList .e-avatar,
+.material-dark #sidebarList .e-avatar,
+.highcontrast #sidebarList .e-avatar {
+    margin-top: 3px;
+}
+
+.fabric #sidebarList .e-avatar,
+.fabric-dark #sidebarList .e-avatar {
+    margin-top: 6px;
+}
+
+.material.e-bigger #sidebarList .e-avatar,
+.material-dark.e-bigger #sidebarList .e-avatar,
+.highcontrast.e-bigger #sidebarList .e-avatar {
+    margin-top: 7px;
+}
+
+.fabric-dark.e-bigger #sidebarList .e-avatar,
+.fabric.e-bigger #sidebarList .e-avatar,
+.bootstrap-dark.e-bigger #sidebarList .e-avatar,
+.bootstrap.e-bigger #sidebarList .e-avatar {
+    margin-top: 10px;
+}
+
+.bootstrap #sidebarList .e-avatar,
+.bootstrap-dark #sidebarList .e-avatar {
+    margin-top: 5px;
+}
+
+.bootstrap5 #sidebarList .e-avatar,
+.bootstrap5-dark #sidebarList .e-avatar {
+    margin-top: -3px;
+}
+
+.tailwind #sidebarList .e-avatar,
+.tailwind-dark #sidebarList .e-avatar {
+    margin-top: -1px;
+}
+
+.bootstrap5.e-bigger #sidebarList .e-avatar,
+.bootstrap5-dark.e-bigger #sidebarList .e-avatar {
+    margin-top: 0px;
+}
+
+.e-bigger.bootstrap5 .sidebar-list .e-listview:not(.e-list-template) .e-list-item,
+.e-bigger.bootstrap5-dark .sidebar-list .e-listview:not(.e-list-template) .e-list-item {
+    height: 43px;
+}
+
+.bootstrap4.e-bigger .sidebar-list .e-listview:not(.e-list-template) .e-list-item {
+    padding: 12px 14px;
+}
+
+/*Specifies the icon styles for the ListView*/
+#listSidebar .e-template-list .e-list-item .javascript {
+    background-image: url('/nextjs/demos/images/sidebar/javascript.svg');
+}
+
+#listSidebar .e-template-list .e-list-item .typescript {
+    background-image: url('/nextjs/demos/images/sidebar/typescript.svg')
+}
+
+#listSidebar .e-template-list .e-list-item .angular {
+    background-image: url('/nextjs/demos/images/sidebar/angular.svg');
+}
+
+#listSidebar .e-template-list .e-list-item .vue {
+    background-image: url('/nextjs/demos/images/sidebar/vue.svg');
+}
+
+#listSidebar .e-template-list .e-list-item .react {
+    background-image: url('/nextjs/demos/images/sidebar/react.svg');
+}
+
+.material-dark #sblist-wrapper .listcontent {
+    color: white;
+}
+
+/* Specifies the border right color for the sidebar in light theme*/
+.material .sidebar-list,
+.fabric .sidebar-list,
+.tailwind .sidebar-list,
+.highcontrast .sidebar-list,
+.bootstrap5 .sidebar-list {
+    border-right: 1px solid #eaeaeae0;
+}
+
+/* Specifies the border right color for the sidebar in dark theme*/
+.material-dark .sidebar-list,
+.fabric-dark .sidebar-list,
+.tailwind-dark .sidebar-list,
+.bootstrap5-dark .sidebar-list {
+    border-right: 1px solid #eaeaea63;
+}

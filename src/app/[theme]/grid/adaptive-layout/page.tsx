@@ -107,7 +107,7 @@ function Adaptive(this: any) {
                   </td>
                   <td>
                     <div>
-                      <CheckBoxComponent ref={(scope) => { checkboxObj = scope as CheckBoxComponent; }} change={onChange.bind(this)} ></CheckBoxComponent>
+                      <CheckBoxComponent ref={(scope) => { checkboxObj = scope as CheckBoxComponent; }} change={onChange.bind(this)} aria-label="Enable horizontal row mode"></CheckBoxComponent>
                     </div>
                   </td>
                 </tr>

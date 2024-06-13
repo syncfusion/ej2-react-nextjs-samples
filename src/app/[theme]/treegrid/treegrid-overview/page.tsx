@@ -4,6 +4,10 @@ import { countries } from '../data';
 import { IFilter } from '@syncfusion/ej2-react-grids';
 import './treegrid-overview.css';
 import { RatingComponent } from '@syncfusion/ej2-react-inputs';
+import { base_path } from '@/common/utils';
+import map from "@/images/treegrid/Map.png"
+import normal from "@/images/treegrid/__Normal.png"
+import Image from "next/image";
 
 const Overview = () => {
   const gridTemplate = (props): any => {
@@ -15,9 +19,9 @@ const Overview = () => {
         <div style={{ display: "inline-block" }}>
           <img
             className="e-image"
-            src={"/nextjs/demos/images/treegrid/" + flagIconLocation + ".png"}
+            src={base_path + "/images/treegrid/" + flagIconLocation + ".png"}
             alt = {flagIconLocation}
-          ></img>
+          />
         </div>
         <div style={{ display: "inline-block", paddingLeft: "6px" }}>
           {props.name}
@@ -60,10 +64,9 @@ const Overview = () => {
   };
 
   const treelocationTemplate = (props): any => {
-    var locationsrc = "/nextjs/demos/images/treegrid/Map.png";
     return (
       <div id="coordinates">
-        <img src={locationsrc} className="e-image" alt={props.coordinates} />
+        <Image src={map} className="e-image" alt={props.coordinates} />
         <a target="_blank" href="https://www.google.com/maps/place/">
           {props.coordinates}
         </a>
@@ -86,12 +89,13 @@ const Overview = () => {
     }
     return (
       <div>
-        <img
-          src="/nextjs/demos/images/treegrid/__Normal.png"
+        <Image
+          src={normal}
           style={{ filter: "brightness(150%)" }}
           className={classValue}
-        ></img>
-        <span style={{ paddingLeft: "7px" }}>{props.timezone}</span>)
+          alt='normalImage'
+        />
+        <span style={{ paddingLeft: "7px" }}>{props.timezone}</span>
       </div>
     );
   };

@@ -1,21 +1,23 @@
 'use client';
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Sort, Filter, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
 import { employeeData } from '../data';
 import '../sample.css';
+import { base_path } from '@/common/utils';
 
 function ColumnTemplate() {
     function gridTemplate(props: any): any {
-        var src = '/nextjs/demos/images/grid/' + props.EmployeeID + '.png';
+        var src = base_path + '/images/grid/' + props.EmployeeID + '.png';
         return (<div className='image'>
             <img src={src} alt={props.EmployeeID} />
         </div>);
     }
     const template: any = gridTemplate;
+    const filterSettings: FilterSettingsModel = { type: 'Excel' };
     
     return (
         <div className='control-pane'>
             <div className='control-section'>
-                <GridComponent dataSource={employeeData} width='auto' height='359'>
+                <GridComponent dataSource={employeeData} width='auto' height='359' allowSorting={true} allowFiltering={true} filterSettings={filterSettings}>
                     <ColumnsDirective>
                         <ColumnDirective headerText='Employee Image' width='180' template={template} textAlign='Center' />
                         <ColumnDirective field='EmployeeID' headerText='Employee ID' width='125' textAlign='Right' />
@@ -24,6 +26,7 @@ function ColumnTemplate() {
                         <ColumnDirective field='HireDate' headerText='Hire Date' width='135' format='yMd' textAlign='Right' />
                         <ColumnDirective field='ReportsTo' headerText='Reports To' width='120' textAlign='Right' />
                     </ColumnsDirective>
+                    <Inject services={[Sort, Filter]} />
                 </GridComponent>
             </div>
             <div id="action-description">

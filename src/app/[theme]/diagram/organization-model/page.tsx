@@ -21,6 +21,7 @@ import { DataManager } from "@syncfusion/ej2-data";
 import { NumericTextBoxComponent } from "@syncfusion/ej2-react-inputs";
 import { localBindData } from '../diagram-data';
 import { useEffect } from "react";
+import { base_path } from '@/common/utils';
 
 export interface EmployeeInfo {
   Role: string;
@@ -342,7 +343,7 @@ function OrganizationModel() {
                   id="toptobottom"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/common-orientation/toptobottom.png')",
+                      `url('${base_path}/images/diagram/common-orientation/toptobottom.png')`,
                     marginRight: "3px"
                   }}
                 />
@@ -351,7 +352,7 @@ function OrganizationModel() {
                   id="bottomtotop"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/common-orientation/bottomtotop.png')",
+                      `url('${base_path}/images/diagram/common-orientation/bottomtotop.png')`,
                     margin: "0px 3px"
                   }}
                 />
@@ -360,7 +361,7 @@ function OrganizationModel() {
                   id="lefttoright"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/common-orientation/lefttoright.png')",
+                      `url('${base_path}/images/diagram/common-orientation/lefttoright.png')`,
                     marginRight: "0px 3px"
                   }}
                 />
@@ -371,7 +372,7 @@ function OrganizationModel() {
                   id="righttoleft"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/common-orientation/righttoleft.png')",
+                      `url('${base_path}/images/diagram/common-orientation/righttoleft.png')`,
                     margin: "0px 3px"
                   }}
                 />
@@ -387,7 +388,7 @@ function OrganizationModel() {
                   id="pattern1"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_1.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_1.png')`,
                     marginRight: "3px"
                   }}
                 />
@@ -396,7 +397,7 @@ function OrganizationModel() {
                   id="pattern2"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_2.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_2.png')`,
                     marginRight: "3px"
                   }}
                 />
@@ -405,7 +406,7 @@ function OrganizationModel() {
                   id="pattern5"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_5.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_5.png')`,
                     margin: "0px 3px"
                   }}
                 />
@@ -416,7 +417,7 @@ function OrganizationModel() {
                   id="pattern6"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_6.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_6.png')`,
                     marginRight: "3px"
                   }}
                 />
@@ -425,7 +426,7 @@ function OrganizationModel() {
                   id="pattern7"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_7.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_7.png')`,
                     marginRight: "3px"
                   }}
                 />
@@ -434,7 +435,7 @@ function OrganizationModel() {
                   id="pattern8"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_8.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_8.png')`,
                     margin: "0px 3px"
                   }}
                 />
@@ -445,7 +446,7 @@ function OrganizationModel() {
                   id="pattern9"
                   style={{
                     backgroundImage:
-                      "url('/nextjs/demos/images/diagram/patternimages/Pattern_9.png')",
+                      `url('${base_path}/images/diagram/patternimages/Pattern_9.png')`,
                     margin: "0px 3px"
                   }}
                 />

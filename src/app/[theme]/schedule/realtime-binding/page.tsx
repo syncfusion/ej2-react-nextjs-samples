@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop, ActionEventArgs, NavigatingEventArgs, View, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
-import { updateSampleSection } from '../common/sample-base';
 import { extend } from '@syncfusion/ej2-base';
 import dataSource from '../datasource.json';
 

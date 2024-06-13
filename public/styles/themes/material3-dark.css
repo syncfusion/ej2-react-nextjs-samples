@@ -234,7 +234,9 @@ body.material3-dark,
 .material3-dark .sb-theme-popup li:hover,
 .material3-dark .sb-search-result .e-list-item:hover,
 .material3-dark .sb-left-pane .e-listview .e-list-item:hover,
-.material3-dark .sb-control-navigation .e-treeview .e-list-item.e-active>.e-fullrow {
+.material3-dark .sb-control-navigation .e-treeview .e-list-item.e-active>.e-fullrow,
+.material3-dark .sb-themeswitch-btn:hover,
+.material3-dark .sb-themeswitch-btn.active {
     background-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -356,7 +358,7 @@ body.material3-dark,
 
 .material3-dark .e-samplestatus.new.tree,
 .material3-dark .e-samplestatus.update.tree,
-.e-samplestatus.preview.tree {
+.material3-dark .e-samplestatus.preview.tree {
     margin: 6px 0;
     height: 22px;
     margin-top: 0px;

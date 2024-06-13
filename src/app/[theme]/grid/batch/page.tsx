@@ -1,5 +1,5 @@
 'use client';
-import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Page, Inject, Sort } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Page, Inject, Sort, Filter, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
 import { data } from '../data';
 
 function BatchEdit() {
@@ -10,10 +10,11 @@ function BatchEdit() {
   const freightRule: Object = { required: true, min: 0};
   const orderidRules: Object = { required: true, number: true };
   const pageSettings: Object = { pageCount: 5 };
+  const filterSettings: FilterSettingsModel = { type: 'Excel' };
   return (
     <div className='control-pane'>
       <div className='control-section'>
-          <GridComponent dataSource={data} pageSettings={pageSettings} allowSorting={true} toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings}>
+          <GridComponent dataSource={data} pageSettings={pageSettings} allowSorting={true} allowFiltering={true} filterSettings={filterSettings} toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings}>
             <ColumnsDirective>
               <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' validationRules={orderidRules} isPrimaryKey={true}></ColumnDirective>
               <ColumnDirective field='CustomerName' headerText='Customer Name' width='150' validationRules={customeridRule}></ColumnDirective>
@@ -21,7 +22,7 @@ function BatchEdit() {
               <ColumnDirective field='OrderDate' headerText='Order Date' editType='datepickeredit' format='yMd' width='170'></ColumnDirective>
               <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' edit={editparams} ></ColumnDirective>
             </ColumnsDirective>
-            <Inject services={[Page, Toolbar, Edit, Sort]} />
+            <Inject services={[Page, Toolbar, Edit, Sort, Filter]} />
           </GridComponent>
         <div id="action-description">
         <p>This sample demonstrates CRUD operations in Grid. You can perform CRUD operations as follows,</p>

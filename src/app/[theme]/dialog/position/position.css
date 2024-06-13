@@ -1,0 +1,47 @@
+#positionDialog table,
+#positionDialog th,
+#positionDialog td {
+    border: 1px solid #D8D8D8;
+    border-collapse: collapse;
+}
+
+.fluent.e-bigger .control-section #positionDialog .e-dialog,
+.fluent-dark.e-bigger .control-section #positionDialog .e-dialog {
+  width: 502px !important;
+}
+
+#poschange {
+  width: 405px;
+}
+
+.fluent.e-bigger #poschange,
+.fluent-dark.e-bigger #poschange {
+  width: 455px;
+}
+
+#positionDialog.e-dialog .e-footer-content {
+    padding: 0px 1px 4px ! important;
+}
+
+.tableStyle {
+  margin: 17px;
+  width: 304px;
+}
+
+.e-dialog .e-dlgcontent{
+    padding: 10px 16px 10px;
+}     
+
+.e-radio +label .e-label {
+  line-height: 18px;
+}
+
+#poschange td {
+  padding: 6px;
+}
+
+div#target.control-section.dialog-position {
+    overflow: visible;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

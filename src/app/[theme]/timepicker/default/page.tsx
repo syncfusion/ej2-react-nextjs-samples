@@ -1,0 +1,30 @@
+'use client';
+import { TimePickerComponent } from '@syncfusion/ej2-react-calendars';
+import '../default-style.css';
+
+function Default() {
+    return (
+        <div className='control-pane default'>
+            <div className='control-section'>
+                <div className='timepicker-control-section'>
+                    <TimePickerComponent ></TimePickerComponent>
+                </div>
+            </div>
+            <div id="action-description">
+                <p>
+                    The following sample demonstrates the default functionalities of the TimePicker. Click/Touch the TimePicker popup icon to select a desired time and the selected time value will be displayed in the TimePicker element.
+                </p>
+            </div>
+            <div id='description'>
+                <p>
+                    A <code>TimePicker</code> is an interactive component that provides an option to select a value from popup list or
+                    set a desired time value.
+                </p>
+                <p>More information about TimePicker and it's configuration can be found in the  <a target='_blank'
+                    href='https://ej2.syncfusion.com/react/documentation/timepicker/getting-started/#adding-timepicker-component-to-the-application'>documentation</a>  section.
+                </p>
+            </div>
+        </div>
+    )
+}
+export default Default;

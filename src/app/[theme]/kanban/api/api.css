@@ -1,0 +1,6 @@
+#apiKanbanProperty .property-panel-content td {
+    padding-top: 10px;
+}
+#apiKanbanProperty .property-panel-header {
+    padding-bottom: 0px;
+}

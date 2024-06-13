@@ -4,6 +4,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Filter, IFilt
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { RatingComponent } from '@syncfusion/ej2-react-inputs';
 import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
+import { base_path } from '@/common/utils';
 import './grid-overview.css';
 import '../Grid/style.css';
 
@@ -37,7 +38,7 @@ function progessTemplate(props): any {
 }
 let loc = { width: '31px', height: '24px' };
 function trustTemplate(props): any {
-  var Trustworthiness = props.Trustworthiness == "Sufficient" ? '/nextjs/demos/images/grid/Sufficient.png' : props.Trustworthiness == "Insufficient" ? '/nextjs/demos/images/grid/Insufficient.png' : '/nextjs/demos/images/grid/Perfect.png';
+  var Trustworthiness = props.Trustworthiness == "Sufficient" ? base_path + '/images/grid/Sufficient.png' : props.Trustworthiness == "Insufficient" ? base_path + '/images/grid/Insufficient.png' : base_path + '/images/grid/Perfect.png';
   return (<div> <img style={loc} src={Trustworthiness} alt="" />
     <span id="Trusttext">{props.Trustworthiness}</span></div>)
 }
@@ -57,7 +58,7 @@ function empTemplate(props): any {
 }
 function coltemplate(props): any {
   return (<div className="Mapimage">
-    <img src="/nextjs/demos/images/grid/Map.png" className="e-image" alt="" /> <span>  </span>
+    <img src={base_path + "/images/grid/Map.png"} className="e-image" alt="" /> <span>  </span>
     <span id="locationtext">{props.Location}</span>
   </div>)
 }
@@ -66,7 +67,7 @@ function trustdetails(props): any {
     return (<span></span>);
   }
   let loc = { width: '31px', height: '24px' };
-  let Trustworthiness = props.Trustworthiness == "Sufficient" ? '/nextjs/demos/images/grid/Sufficient.png' : props.Trustworthiness == "Insufficient" ? '/nextjs/demos/images/grid/Insufficient.png' : '/nextjs/demos/images/grid/Perfect.png';
+  let Trustworthiness = props.Trustworthiness == "Sufficient" ? base_path + '/images/grid/Sufficient.png' : props.Trustworthiness == "Insufficient" ? base_path + '/images/grid/Insufficient.png' : base_path + '/images/grid/Perfect.png';
   return (<div><img style={loc} src={Trustworthiness} alt="" /> <span id="Trusttext">{props.Trustworthiness}</span></div>);
 }
 function ratingDetails(props): any {
@@ -169,18 +170,25 @@ function OverView() {
       dReady = true;
       stTime = performance.now();
     });
-    document.getElementById('overviewgrid').addEventListener('DOMSubtreeModified', () => {
-      if (dReady && stTime && isDataChanged) {
-        let msgEle = document.getElementById('msg');
-        let val: any = (performance.now() - stTime).toFixed(0);
-        stTime = null;
-        dReady = false;
-        dtTime = false;
-        isDataChanged = false;
-        msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
-        msgEle.classList.remove('e-hide')
-      }
-    })
+    var observer = new MutationObserver((mutations) => {
+      mutations.forEach(() => {
+        if (dReady && stTime && isDataChanged) {
+          let msgEle: Element = document.getElementById('msg') as Element;
+          let val: any = (performance.now() - stTime).toFixed(0);
+          stTime = null;
+          dReady = false;
+          dtTime = false;
+          isDataChanged = false;
+          msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
+          msgEle.classList.remove('e-hide')
+        }
+      });
+    });
+    observer.observe(document.getElementById('overviewgrid') as Node, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+    });
   }
   const gridFilter: any = {
     type: 'Menu'

@@ -9,6 +9,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { category, apiList } from './sample-config';
 import Link from 'next/link';
 import { setSelectList } from './left-pane';
+import { base_path } from './utils';
 
 let tabContentToolbar: Element;
 let hash: string[];
@@ -356,7 +357,7 @@ function Content({
 
     function generatePath(path: string): { path: string, displayName: string }[] {
         let splitPath = path.split('/')[3];
-        let tsx = [{ path: `/nextjs/demos/src/${path.split('/').slice(2).join('/')}/page.tsx`, displayName: `${splitPath}.tsx` }];
+        let tsx = [{ path: `${base_path}/src/${path.split('/').slice(2).join('/')}/page.tsx`, displayName: `${splitPath}.tsx` }];
         return tsx;
     }
 

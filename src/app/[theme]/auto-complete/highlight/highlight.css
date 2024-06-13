@@ -1,0 +1,9 @@
+#highlight {
+    margin: 0 auto;
+    width: 250px !important;
+    padding-top: 15px;
+}
+
+.e-dropdownbase .e-list-item .e-highlight {
+    color: red;
+}

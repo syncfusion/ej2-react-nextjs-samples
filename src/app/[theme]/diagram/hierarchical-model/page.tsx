@@ -20,7 +20,7 @@ import { NumericTextBoxComponent } from "@syncfusion/ej2-react-inputs";
 import { CheckBoxComponent, ChangeEventArgs } from "@syncfusion/ej2-react-buttons";
 import { hierarchicalTree } from '../diagram-data';
 import { useEffect } from "react";
-
+import { base_path } from "@/common/utils";
 
 export interface EmployeeInfo {
   Name: string;
@@ -237,7 +237,7 @@ function HierarchicalModel() {
               id="toptobottom"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/common-orientation/toptobottom.png')",
+                  `url('${base_path}/images/diagram/common-orientation/toptobottom.png')`,
                 marginRight: "3px"
               }}
             />
@@ -246,7 +246,7 @@ function HierarchicalModel() {
               id="bottomtotop"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/common-orientation/bottomtotop.png')",
+                  `url('${base_path}/images/diagram/common-orientation/bottomtotop.png')`,
                 marginRight: "3px"
               }}
             />
@@ -255,7 +255,7 @@ function HierarchicalModel() {
               id="lefttoright"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/common-orientation/lefttoright.png')",
+                  `url('${base_path}/images/diagram/common-orientation/lefttoright.png')`,
                 margin: "0px 3px"
               }}
             />
@@ -266,7 +266,7 @@ function HierarchicalModel() {
               id="righttoleft"
               style={{
                 backgroundImage:
-                  "url('/nextjs/demos/images/diagram/common-orientation/righttoleft.png')",
+                  `url('${base_path}/images/diagram/common-orientation/righttoleft.png')`,
                 margin: "0px 3px"
               }}
             />
