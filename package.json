@@ -1,7 +1,7 @@
 {
   "name": "ej2-react-nextjs-samples",
   "version": "26.1.35",
-  "description": "Examples of Next.js React UI Components",
+  "description": "Examples of Syncfusion Next.js React UI Components",
   "author": "Syncfusion Inc.",
   "license": "SEE LICENSE IN license",
   "scripts": {
@@ -51,6 +51,7 @@
     "@syncfusion/ej2-react-spreadsheet": "*",
     "@syncfusion/ej2-react-treegrid": "*",
     "@syncfusion/ej2-react-treemap": "*",
+    "moment-timezone": "^0.5.43",
     "marked": "^12.0.2",
     "next": "14.0.4",
     "react": "^18",
