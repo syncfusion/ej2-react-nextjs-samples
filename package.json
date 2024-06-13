@@ -1,7 +1,7 @@
 {
   "name": "ej2-react-nextjs-samples",
-  "version": "25.1.35",
-  "description": "Examples of Syncfusion Next.js React UI Components",
+  "version": "26.1.35",
+  "description": "Examples of Next.js React UI Components",
   "author": "Syncfusion Inc.",
   "license": "SEE LICENSE IN license",
   "scripts": {
@@ -36,6 +36,7 @@
     "@syncfusion/ej2-react-lineargauge": "*",
     "@syncfusion/ej2-react-lists": "*",
     "@syncfusion/ej2-react-maps": "*",
+    "@syncfusion/ej2-react-multicolumn-combobox": "*",
     "@syncfusion/ej2-react-navigations": "*",
     "@syncfusion/ej2-react-notifications": "*",
     "@syncfusion/ej2-react-pdfviewer": "*",
@@ -50,21 +51,23 @@
     "@syncfusion/ej2-react-spreadsheet": "*",
     "@syncfusion/ej2-react-treegrid": "*",
     "@syncfusion/ej2-react-treemap": "*",
-    "moment-timezone": "^0.5.43",
+    "marked": "^12.0.2",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@microsoft/signalr": "^7.0.11",
+    "@syncfusion/ej2-sample-helper-test": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/codemirror": "5.60.10",
+    "codemirror": "5.65.16",
     "elasticlunr": "^0.9.5",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "gulp": "^4.0.2",
-    "shelljs": "^0.8.5",
     "typescript": "^5"
   }
 }

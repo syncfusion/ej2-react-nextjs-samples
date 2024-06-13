@@ -201,9 +201,9 @@ function LiveStream() {
         <div className='control-pane'>
             <div className='control-section row'>
                 <div style={{ marginBottom: '10px' }}>
-                    <h4 style={{ display: 'inline-block', fontSize: '14px', paddingLeft:'5px' }}>
+                    <label style={{ display: 'inline-block', fontSize: '14px', paddingLeft:'5px' }}>
                         Feed Delay(ms):
-                    </h4>
+                    </label>
                     <NumericTextBoxComponent
                         format="N0"
                         value={1000}
@@ -215,6 +215,7 @@ function LiveStream() {
                         ref={(scope) => {
                             feedDelayInput = scope;
                         }}
+                        aria-label='Feed delay'
                     />
                     <ButtonComponent
                         id="update1"

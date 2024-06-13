@@ -1,0 +1,16 @@
+#multigroup.control-pane .control-section, 
+#multilocal.control-styles,
+#multiremote.control-styles,
+#multifilter.control-styles,
+#multidefault.control-styles {
+    width: 80%;
+    margin: 0 auto;
+    min-width: 185px;
+}
+.e-bigger #multigroup.control-pane .control-section,
+.e-bigger #multilocal.control-styles,
+.e-bigger #multiremote.control-styles,
+.e-bigger #multifilter.control-styles,
+.e-bigger #multidefault.control-styles {
+    width: 100%;
+}

@@ -3,6 +3,7 @@ import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page } fr
 import { headerData } from '../data';
 import './header-template.css'
 import Image from 'next/image';
+import { base_path } from '@/common/utils';
 
 const HeaderTemplate = () => {
   return (
@@ -24,7 +25,7 @@ const HeaderTemplate = () => {
                   return (
                     <div>
                       <Image
-                        src="/nextjs/demos/images/treegrid/__Task name.png"
+                        src={base_path + "/images/treegrid/__Task name.png"}
                         width="20"
                         height="20"
                         className="taskName"
@@ -46,7 +47,7 @@ const HeaderTemplate = () => {
                   return (
                     <div>
                       <Image
-                        src="/nextjs/demos/images/treegrid/__Start name.png"
+                        src={base_path + "/images/treegrid/__Start name.png"}
                         width="20"
                         height="20"
                         className="startDate"
@@ -65,7 +66,7 @@ const HeaderTemplate = () => {
                   return (
                     <div>
                       <Image
-                        src="/nextjs/demos/images/treegrid/__Resources.png"
+                        src={base_path + "/images/treegrid/__Resources.png"}
                         width="20"
                         height="20"
                         className="resources"
@@ -84,7 +85,7 @@ const HeaderTemplate = () => {
                   return (
                     <div>
                       <Image
-                        src="/nextjs/demos/images/treegrid/__Duration.png"
+                        src={base_path + "/images/treegrid/__Duration.png"}
                         width="20"
                         height="20"
                         className="duration"
@@ -104,7 +105,7 @@ const HeaderTemplate = () => {
                   return (
                     <div>
                       <Image
-                        src="/nextjs/demos/images/treegrid/__progress.png"
+                        src={base_path + "/images/treegrid/__progress.png"}
                         width="20"
                         height="20"
                         className="progress-column"

@@ -1,0 +1,73 @@
+    
+    #api_property .form-label {
+        margin-bottom: 0;
+        font-size: 12px;
+        line-height: 1.5;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    #api_property .row .e-btn {
+        display: inline;
+    }
+
+    #api_dashboard {
+        padding: 10px;
+        width: 100%;
+    }
+    #api_dashboard .panel-content {
+        vertical-align: middle;
+        font-size: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.61);
+        text-align: center;
+    }
+
+    #api_dashboard .e-panel-content {
+        height: calc(100% - 28px);
+        width: 100%;
+        display: block;
+    }
+    
+    #api_dashboard .e-panel .e-header-text {
+        padding: 12px 0 12px 0;
+    }
+    
+    #api_dashboard.e-dashboardlayout.e-control .e-panel .e-panel-header {
+        font-size: 15px;
+        font-weight: 500;
+        height: 37px;
+        padding: 10px;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, .03);
+        border-bottom: 0.5px solid #e3e3e3;
+    }
+    
+    #api_property .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #api_property .row-header {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    #api_dashboard .e-panel-content {
+        padding: 15px;
+    }
+    
+    #api_dashboard #reset {
+        display: block;
+        margin: 0 auto;
+        width: 90px;
+    }
+    
+    div#control_dash {
+        border: 1px solid lightgray;
+    }
+    
+    .property-section.dashboard .e-input-group.e-control-wrapper {
+        width:122px;
+    }

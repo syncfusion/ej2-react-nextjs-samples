@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 import LeftPane from '@/common/left-pane';
 import Content, { processDeviceDependables, selectDefaultTab } from '@/common/component-content';
@@ -17,6 +17,7 @@ import { DataManager, DataUtil, Query } from '@syncfusion/ej2-data';
 import { ListBase } from '@syncfusion/ej2-react-lists';
 import * as elasticlunr from '@/common/lib/elasticlunr';
 import { Locale } from '@/common/locale-string';
+import { base_path } from '@/common/utils';
 import * as numberingSystems from '@/common/cldr-data/supplemental/numberingSystems.json';
 import * as currencyData from '@/common/cldr-data/supplemental/currencyData.json';
 import * as deCultureData from '@/common/cldr-data/main/de/all.json';
@@ -44,7 +45,8 @@ let currencyDropDown!: DropDownListComponent;
  * default theme on sample loaded
  */
 export let selectedTheme: string;
-export const themeCollection: string[] = ['fluent', 'fluent-dark', 'bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'material3', 'material3-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
+export const themeCollection: string[] = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'highcontrast', 'fluent'];
+
 let themeList: HTMLElement;
 
 /**
@@ -107,25 +109,22 @@ export default function Home({ children, theme
   let actionDescription = useRef(null);
   let openedPopup: any = useRef(null);
   let themeDropDown = useRef<DropDownListComponent>(null);
+  let themeModeDropDown = useRef<DropDownListComponent>(null);
   let searchInstance: any;
   let mobileOverlay: Element;
+
+  const themesModeData: { [key: string]: Object }[] = [
+    { Id: 'Light', display: 'Light Mode' },
+    { Id: 'Dark', display: 'Dark Mode' }
+  ];
+
   const themesData: { [key: string]: Object }[] = [
-    { Id: 'fluent', display: 'Fluent' },
-    { Id: 'fluent-dark', display: 'Fluent Dark' },
-    { Id: 'bootstrap5', display: 'Bootstrap v5' },
-    { Id: 'bootstrap5-dark', display: 'Bootstrap v5 Dark' },
-    { Id: 'tailwind', display: 'Tailwind CSS' },
-    { Id: 'tailwind-dark', display: 'Tailwind CSS Dark' },
-    { Id: 'material', display: 'Material' },
-    { Id: 'material-dark', display: 'Material Dark' },
     { Id: 'material3', display: 'Material 3' },
-    { Id: 'material3-dark', display: 'Material 3 Dark' },
-    { Id: 'fabric', display: 'Fabric' },
-    { Id: 'fabric-dark', display: 'Fabric Dark' },
-    { Id: 'bootstrap4', display: 'Bootstrap v4' },
-    { Id: 'bootstrap', display: 'Bootstrap' },
-    { Id: 'bootstrap-dark', display: 'Bootstrap Dark' },
-    { Id: 'highcontrast', display: 'High Contrast' }
+    { Id: 'bootstrap5', display: 'Bootstrap 5' },
+    { Id: 'fluent2', display: 'Fluent 2' },
+    { Id: 'tailwind', display: 'Tailwind CSS' },
+    { Id: 'highcontrast', display: 'High Contrast' },
+    { Id: 'fluent', display: 'Fluent' }
   ];
 
   const cultureData: { [key: string]: Object }[] = [
@@ -197,6 +196,23 @@ export default function Home({ children, theme
   enableRipple((selectedTheme && selectedTheme.indexOf('material') !== -1) || !selectedTheme);
 
   useEffect(() => {
+    const themeMode: HTMLElement = document.getElementById('theme-mode') as HTMLElement;
+    if (!isMobile) {
+      (document.querySelector('#dark-light-content') as HTMLElement).classList.remove('sb-hide');
+      themeMode.classList.add('sb-hide');
+    } else {
+      const mobileModeIcon: HTMLElement = document.getElementById('mobile-mode-icon') as HTMLElement;
+      themeMode.classList.remove('sb-hide');
+      if (selectedTheme.includes('highcontrast')) {
+        themeMode.classList.add('hidden');
+      }
+      if (selectedTheme.includes('-dark')) {
+        mobileModeIcon.classList.add('pane-light-theme');
+      }
+      else {
+        mobileModeIcon.classList.add('pane-dark-theme');
+      }
+    }
     setCulture('en');
     let newYear: number = new Date().getFullYear();
     let copyRight: HTMLElement = select('.sb-footer-copyright') as HTMLElement;
@@ -210,8 +226,15 @@ export default function Home({ children, theme
       switchText = 'touch';
     }
     (themeList.querySelector('.active') as HTMLElement).classList.remove('active');
-    (themeList.querySelector('#' + selectedTheme) as HTMLElement).classList.add('active');
-    (themeList.querySelector('#' + selectedTheme) as HTMLElement).setAttribute('aria-current', 'true');
+    (themeList.querySelector('#' + selectedTheme.replace('-dark', '')) as HTMLElement).classList.add('active');
+    (themeList.querySelector('#' + selectedTheme.replace('-dark', '')) as HTMLElement).setAttribute('aria-current', 'true');
+    let themeSwitchBtn: HTMLElement = document.querySelector('.sb-themeswitch-btn') as HTMLElement;
+    if (selectedTheme) {
+      selectedTheme.includes('highcontrast') ? themeSwitchBtn.classList.add('hidden') : themeSwitchBtn.classList.remove('hidden');
+      (themeSwitchBtn.querySelector('.sb-icons') as HTMLElement).className = 'sb-icons';
+      (themeSwitchBtn.querySelector('.sb-icons') as HTMLElement).classList.add(selectedTheme.includes('-dark') ? 'dark-theme' : 'light-theme');
+      (themeSwitchBtn.querySelector('.theme-text') as HTMLElement).innerHTML = selectedTheme.includes('-dark') ? 'LIGHT' : 'DARK';
+    }
     loadCldr(numberingSystems, chinaCultureData, enCultureData, swissCultureDate, currencyData, deCultureData, arCultureData);
     L10n.load(Locale);
     changeMouseOrTouch(switchText);
@@ -460,9 +483,9 @@ export default function Home({ children, theme
       }
     });
 
-  /**
-  * resize event
-  */
+    /**
+    * resize event
+    */
     window.addEventListener('resize', processResize);
     select('.sb-right-pane').addEventListener('click', () => {
       if (isTablet && isLeftPaneOpen()) {
@@ -762,7 +785,8 @@ export default function Home({ children, theme
     let target: Element = e.target as HTMLElement;
     target = closest(target, 'li');
     let themeName: string = target.id;
-    switchTheme(themeName);
+    const newTheme = (selectedTheme.includes('-dark') && !themeName.includes('highcontrast')) ? (themeName + '-dark') : themeName;
+    switchTheme(newTheme);
   }
 
   function switchTheme(str: string): void {
@@ -775,7 +799,7 @@ export default function Home({ children, theme
     }
     let setResponsiveElement: Element = select('.setting-responsive');
     localStorage.setItem('ej2-switch', select('.active', setResponsiveElement).id);
-    location.pathname = '/nextjs/demos/' + str + '/' + location.pathname.split('/').slice(4).join('/');
+    location.pathname = base_path + '/' + str + '/' + location.pathname.split('/').slice(4).join('/');
   }
 
   /**
@@ -805,6 +829,22 @@ export default function Home({ children, theme
   function isLeftPaneOpen(): boolean {
     sidebar = select('#left-sidebar').ej2_instances[0] as SidebarComponent;
     return sidebar?.isOpen;
+  }
+
+  const handleButton = () => {
+    const isDark = selectedTheme.includes('-dark');
+    const isNewThemeDark = isDark ? selectedTheme.replace('-dark', '') : (selectedTheme + '-dark');
+    switchTheme(isNewThemeDark);
+  }
+
+  function changeThemeMode(e: any): void {
+    const mode = e.value;
+    if (mode === 'Dark' && !selectedTheme.includes('highcontrast')) {
+      switchTheme(selectedTheme + '-dark');
+    }
+    else {
+      switchTheme(selectedTheme.replace('-dark', ''))
+    }
   }
 
   return (
@@ -867,16 +907,16 @@ export default function Home({ children, theme
               </div>
             </div>
             <div className='sb-header-item sb-table-cell sb-lang-toggler-wrapper'>
-              <span id='sb-switcher' className='sb-lang-toggler sb-icons sb-icon-Dropdown' 
+              <span id='sb-switcher' className='sb-lang-toggler sb-icons sb-icon-Dropdown'
                 role="button" aria-label="Sample Browser Switcher" aria-haspopup="dialog"
-              onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && sbHeaderClick('changeSampleBrowser')} tabIndex={0}></span>
+                onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && sbHeaderClick('changeSampleBrowser')} tabIndex={0}></span>
             </div>
           </div>
           <div className='sb-header-right sb-right sb-table'>
             <div className="sb-header-item sb-table-cell">
               <div id="header-theme-switcher" className="theme-wrapper"
-              role="button" aria-label="Opens choose theme popup" aria-haspopup="dialog"
-              onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && sbHeaderClick('changeTheme')} tabIndex={0}>
+                role="button" aria-label="Opens choose theme popup" aria-haspopup="dialog"
+                onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && sbHeaderClick('changeTheme')} tabIndex={0}>
                 <div id="sb-theme-text" className="sb-theme-text">
                   <span className="sb-header-text-left">CHOOSE THEME</span>
                 </div>
@@ -885,10 +925,17 @@ export default function Home({ children, theme
                 </div>
               </div>
             </div>
+            <div className="sb-table-cell sb-hide" id="dark-light-content">
+              <button className="sb-themeswitch-btn" onClick={handleButton}>
+                <span className="sb-icons light-theme"></span>
+                <span className="theme-text">DARK</span>
+              </button>
+            </div>
+            <div className="sb-table-cell sb-theme-splitter sb-download-splitter"></div>
             <div className='sb-header-item sb-table-cell sb-search-wrapper'>
               <div className="sb-search-btn" id='sb-trigger-search'
-              role="button" aria-label="Opens Search Input" aria-controls="search-popup"
-              onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && toggleSearchOverlay()} tabIndex={0}>
+                role="button" aria-label="Opens Search Input" aria-controls="search-popup"
+                onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && toggleSearchOverlay()} tabIndex={0}>
                 <span className='sb-settings sb-icons sb-icon-Search'></span>
               </div>
             </div>
@@ -911,7 +958,7 @@ export default function Home({ children, theme
 
         </div>
         <div id='sb-popup-section' className='sb-popups'>
-          <div id='sb-switcher-popup'  role="dialog" aria-label="Essential JS2 Sample Browser List" className='sb-switch-popup'>
+          <div id='sb-switcher-popup' role="dialog" aria-label="Essential JS2 Sample Browser List" className='sb-switch-popup'>
             <ul id='switch-sb' role="list">
               <li className='sb-current' role="listitem">Next.js</li>
               <li role="listitem">
@@ -920,19 +967,19 @@ export default function Home({ children, theme
               <li role="listitem">
                 <a id='angular'>Angular</a>
               </li>
-              <li  role="listitem">
+              <li role="listitem">
                 <a id='typescript'>JavaScript</a>
               </li>
-              <li  role="listitem">
+              <li role="listitem">
                 <a id='javascript'>JavaScript (ES5)</a>
               </li>
-              <li  role="listitem">
+              <li role="listitem">
                 <a id='aspnetcore'>ASP.NET Core</a>
               </li>
-              <li  role="listitem">
+              <li role="listitem">
                 <a id='aspnetmvc'>ASP.NET MVC</a>
               </li>
-              <li  role="listitem">
+              <li role="listitem">
                 <a id='vue'>Vue</a>
               </li>
               <li role="listitem">
@@ -942,69 +989,29 @@ export default function Home({ children, theme
           </div>
           <div id='theme-switcher-popup' className='sb-theme-popup'>
             <ul id="themelist" className="options" role="list">
-              <li className="e-list" id="fluent" role="listitem">
+              <li className='e-list' id="material3" role="listitem">
                 <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Fluent</span>
-              </li>
-              <li className="e-list" id="fluent-dark" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Fluent Dark</span>
+                <span className="switch-text">Material 3</span>
               </li>
               <li className="e-list" id="bootstrap5" role="listitem">
                 <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Bootstrap v5</span>
+                <span className="switch-text">Bootstrap 5</span>
               </li>
-              <li className="e-list" id="bootstrap5-dark" role="listitem">
+              <li className="e-list active" id="fluent2" role="listitem">
                 <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Bootstrap v5 dark</span>
+                <span className="switch-text">Fluent 2</span>
               </li>
               <li className="e-list" id="tailwind" role="listitem">
                 <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
                 <span className="switch-text">Tailwind CSS</span>
               </li>
-              <li className="e-list" id="tailwind-dark" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Tailwind CSS Dark</span>
-              </li>
-              <li className='e-list' id="material" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Material</span>
-              </li>
-              <li className="e-list" id="material-dark" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Material Dark</span>
-              </li>
-              <li className='active' id="material3" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Material 3</span>
-              </li>
-              <li className="e-list" id="material3-dark" role="listitem">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Material 3 Dark</span>
-              </li>
-              <li id="fabric">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Fabric</span>
-              </li>
-              <li className="e-list" id="fabric-dark">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Fabric Dark</span>
-              </li>
-              <li className="e-list" id="bootstrap4">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Bootstrap v4</span>
-              </li>
-              <li className="e-list" id="bootstrap">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Bootstrap</span>
-              </li>
-              <li className="e-list" id="bootstrap-dark">
-                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
-                <span className="switch-text">Bootstrap Dark</span>
-              </li>
-              <li className="e-list" id="highcontrast">
+              <li className="e-list" id="highcontrast" role="listitem">
                 <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
                 <span className="switch-text">High Contrast</span>
+              </li>
+              <li className="e-list" id="fluent" role="listitem">
+                <span className='sb-icons sb-theme-select sb-icon-icon-selection'></span>
+                <span className="switch-text">Fluent</span>
               </li>
               <div className="sb-theme-studio"><a target="_blank" href="https://ej2.syncfusion.com/themestudio/?theme=material" aria-label="Go to Theme Studio (Opens in a new window)">Go to Theme Studio</a></div>
             </ul>
@@ -1023,7 +1030,11 @@ export default function Home({ children, theme
                 <div className='setting-content  setting-theme-change'>
                   <DropDownListComponent id="sb-setting-theme" ref={themeDropDown} title="Theme Selection" placeholder="Select a theme"
                     className='sb-setting-theme-select' dataSource={themesData} fields={dropdownFields}
-                    change={(e: any) => { switchTheme(e.value); }} index={0} />
+                    change={(e: any) => {
+                      selectedTheme?.includes('-dark') && !e.value.includes('highcontrast') ? switchTheme(e.value + '-dark') :
+                        switchTheme(e.value);
+                    }}
+                    index={themeCollection.indexOf(selectedTheme?.split('-')[0])} />
                 </div>
               </div>
               <div className='sb-setting-item sb-responsive-section'>
@@ -1033,9 +1044,21 @@ export default function Home({ children, theme
                 </div>
                 <div className='setting-content btn-group setting-responsive'>
                   <button id='touch' className="sb-responsive-items set-border-radious-touch"
-                  role="button" aria-label="Select touch mode" onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && setMouseOrTouch(event)} tabIndex={0}>Touch</button>
+                    role="button" aria-label="Select touch mode" onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && setMouseOrTouch(event)} tabIndex={0}>Touch</button>
                   <button id='mouse' className="sb-responsive-items set-border-radious-mouse"
-                  role="button" aria-label="Select mouse mode" onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && setMouseOrTouch(event)} tabIndex={0}>Mouse</button>
+                    role="button" aria-label="Select mouse mode" onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && setMouseOrTouch(event)} tabIndex={0}>Mouse</button>
+                </div>
+              </div>
+              <div className="sb-setting-item sb-hide" id="theme-mode">
+                <div className="theme-mode-label">
+                  <div className="sb-icons " id="mobile-mode-icon"></div>
+                  <div className='mode-label'>Theme Modes</div>
+                </div>
+                <div className="sb-theme-option">
+                  <DropDownListComponent id="sb-theme-mode" ref={themeModeDropDown} title="Theme Modes"
+                    className='sb-setting-theme-select' dataSource={themesModeData} fields={dropdownFields}
+                    index={selectedTheme?.includes('-dark') ? 1 : 0}
+                    change={(e: any) => { changeThemeMode(e); }} />
                 </div>
               </div>
               <div className='sb-setting-item sb-setting-culture'>

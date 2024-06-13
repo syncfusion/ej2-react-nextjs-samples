@@ -1,0 +1,48 @@
+.calendar-control-section {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* special dates sample styles */
+
+#control_wrapper.multiselectWrapper{
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+#control_wrapper.multiselectWrapper {
+    float: none;
+}
+
+.content-value {
+    padding: 10px;
+    overflow: auto;
+    max-height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.highcontrast .content-value,
+.material-dark .content-value,
+.material3-dark .content-value,
+.fabric-dark .content-value,
+.bootstrap-dark .content-value,
+.bootstrap5-dark .content-value,
+.tailwind-dark .content-value,
+.fluent-dark .content-value {
+    border: 1px solid rgb(150, 150, 150);
+}
+
+body.fluent-dark #date_label,
+body.bootstrap5-dark #date_label,
+body.tailwind-dark #date_label,
+body.material-dark #date_label,
+body.material3-dark #date_label,
+body.fabric-dark #date_label,
+body.bootstrap-dark #date_label,
+body.highcontrast #date_label {
+    color: white;
+} 
+
+/* end of custom generated icons styles */

@@ -22,6 +22,7 @@ import {
   ChangeEventArgs as CheckBoxChangeEventArgs
 } from "@syncfusion/ej2-react-buttons";
 import { useEffect } from "react";
+import { base_path } from "@/common/utils";
 
 //Initializes the nodes for the diagram
 let sdlc: SdlcNodeModel[] = [
@@ -305,7 +306,7 @@ function GettingStartedNodes() {
               className="image-pattern-style"
               id="preview0"
               style={{
-                backgroundImage: "url('/nextjs/demos/images/diagram/node/Nodes_1.png')",
+                backgroundImage: `url('${base_path}/images/diagram/node/Nodes_1.png')`,
                 marginRight: "3px"
               }}
             />
@@ -313,7 +314,7 @@ function GettingStartedNodes() {
               className="image-pattern-style"
               id="preview1"
               style={{
-                backgroundImage: "url('/nextjs/demos/images/diagram/node/Nodes_2.png')",
+                backgroundImage: `url('${base_path}/images/diagram/node/Nodes_2.png')`,
                 marginRight: "0px 3px"
               }}
             />
@@ -321,7 +322,7 @@ function GettingStartedNodes() {
               className="image-pattern-style"
               id="preview2"
               style={{
-                backgroundImage: "url('/nextjs/demos/images/diagram/node/Nodes_3.png')",
+                backgroundImage: `url('${base_path}/images/diagram/node/Nodes_3.png')`,
                 margin: "0px 3px"
               }}
             />
@@ -331,7 +332,7 @@ function GettingStartedNodes() {
               className="image-pattern-style"
               id="preview3"
               style={{
-                backgroundImage: "url('/nextjs/demos/images/diagram/node/Nodes_4.png')",
+                backgroundImage: `url('${base_path}/images/diagram/node/Nodes_4.png')`,
                 marginRight: "3px"
               }}
             />
@@ -339,7 +340,7 @@ function GettingStartedNodes() {
               className="image-pattern-style"
               id="preview4"
               style={{
-                backgroundImage: "url('/nextjs/demos/images/diagram/node/Nodes_5.png')",
+                backgroundImage: `url('${base_path}/images/diagram/node/Nodes_5.png')`,
                 margin: "3px"
               }}
             />

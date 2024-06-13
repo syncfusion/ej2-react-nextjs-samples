@@ -10,7 +10,7 @@ import '../pdf.component.css';
 
 function CustomToolbar() {
   useEffect(() => {
-    renderComplete();
+    wireEvent();
   }, [])
   let viewer: PdfViewerComponent;
   let matchCase: boolean;
@@ -241,9 +241,6 @@ function CustomToolbar() {
     }
   }
 
-  function renderComplete() {
-    wireEvent();
-  }
   function template() {
     return (
       <div ><span className='e-pv-total-page-number' id='totalPage'>of 0</span></div>

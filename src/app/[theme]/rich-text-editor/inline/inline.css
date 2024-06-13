@@ -1,0 +1,11 @@
+#rteInline .e-richtexteditor .e-rte-content .e-content {
+    float: left;
+    width: 100%;
+}
+
+#rteInline .content-wrapper {
+    width: auto;
+    margin: 0;
+    height: 400px;
+    overflow: auto;
+}

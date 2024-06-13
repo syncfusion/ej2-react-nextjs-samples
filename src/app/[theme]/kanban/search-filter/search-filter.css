@@ -1,0 +1,24 @@
+#searchFilterProperty .property-panel-content .e-filter-table {
+    width: 100%;
+}
+
+#searchFilterProperty .property-panel-content .e-filter-label {
+    width: 30%
+}
+
+#searchFilterProperty .property-panel-content .e-reset-button {
+    padding-top: 13px;
+    text-align: center;
+}
+
+#searchFilterProperty .property-panel-content td {
+    padding-top: 10px;
+}
+
+#searchFilterProperty .property-panel-header {
+    padding-bottom: 0px;
+}
+
+#searchFilterProperty .kanban-control-section .filtering.property-panel-content {
+    min-height: 0px;
+}

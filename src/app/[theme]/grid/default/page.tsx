@@ -1,20 +1,27 @@
 'use client';
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Sort, Filter, Edit, Toolbar, EditSettingsModel, ToolbarItems, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
 import { orderDetails } from '../data';
 
 function Default() {
+  const filterSettings: FilterSettingsModel = { type: 'Excel' };
+  const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true};
+  const customeridRule: Object = { required: true, minLength: 5};
+  const freightRule: Object = { required: true, min: 0};
+  const orderidRules: Object = { required: true, number: true };
   return (
     <div className='control-pane'>
       <div className='control-section'>
-        <GridComponent dataSource={orderDetails} height='350'>
+        <GridComponent dataSource={orderDetails} height='350' allowSorting={true} allowFiltering={true} filterSettings={filterSettings} toolbar={toolbar} editSettings={editSettings}>
           <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='CustomerName' headerText='Customer Name' width='150'></ColumnDirective>
-            <ColumnDirective field='OrderDate' headerText='Order Date' width='130' format='yMd' textAlign='Right' />
-            <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' textAlign='Right' />
-            <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='130' format='yMd' textAlign='Right'></ColumnDirective>
-            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' validationRules={orderidRules} isPrimaryKey={true}></ColumnDirective>
+            <ColumnDirective field='CustomerName' headerText='Customer Name' width='150' validationRules={customeridRule}></ColumnDirective>
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='130' format='yMd' textAlign='Right' editType='datepickeredit'/>
+            <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' textAlign='Right' validationRules={freightRule} editType='numericedit'/>
+            <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='130' format='yMd' textAlign='Right' editType='datepickeredit'></ColumnDirective>
+            <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit'></ColumnDirective>
           </ColumnsDirective>
+          <Inject services={[Sort, Filter, Edit, Toolbar]} />
         </GridComponent>
       </div>
       <div id="action-description">

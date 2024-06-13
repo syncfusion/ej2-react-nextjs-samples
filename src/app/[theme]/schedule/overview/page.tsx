@@ -11,6 +11,7 @@ import { addClass, Browser, closest, extend, Internationalization, isNullOrUndef
 import { DataManager, Predicate, Query } from '@syncfusion/ej2-data';
 import { tz } from 'moment-timezone';
 import './overview.css';
+import { base_path } from '@/common/utils';
 
 const Overview = () => {
   useEffect(() => {
@@ -308,19 +309,19 @@ const Overview = () => {
   const getWeather = (value: Date) => {
     switch (value.getDay()) {
       case 0:
-        return '<img class="weather-image"  src= "/nextjs/demos/images/schedule/weather-clear.svg" />';
+        return `<img class="weather-image"  src= "${base_path}/images/schedule/weather-clear.svg" />`;
       case 1:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-clouds.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-clouds.svg"/>`;
       case 2:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-rain.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-rain.svg"/>`;
       case 3:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-clouds.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-clouds.svg"/>`;
       case 4:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-rain.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-rain.svg"/>`;
       case 5:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-clear.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-clear.svg"/>`;
       case 6:
-        return '<img class="weather-image" src="/nextjs/demos/images/schedule/weather-clouds.svg"/>';
+        return `<img class="weather-image" src="${base_path}/images/schedule/weather-clouds.svg"/>`;
       default:
         return null;
     }

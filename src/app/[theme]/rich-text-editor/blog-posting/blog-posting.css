@@ -1,0 +1,306 @@
+
+#rteUseCase .control-wrapper .tagSection {
+    float: left;
+}
+
+#rteUseCase .control-wrapper .likeAnswer span.e-icon {
+    float: left;
+}
+
+#rteUseCase .control-wrapper img.e-icon {
+    width: 13px;
+    height: 25px;
+}
+
+#rteUseCase .control-wrapper span.questionSide {
+    margin-left: 24px;
+    float: left;
+}
+
+#rteUseCase .control-wrapper .e-dislike {
+    margin-left: 16px;
+    float: left;
+}
+
+#rteUseCase .control-wrapper .questionHeader {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+#rteUseCase .control-wrapper .header {
+    font-size: 16px;
+    font-family: roboto-Semibold, SegoeUI-Semibold;
+    color: #000000;
+    font-weight: bold;
+    clear: both;
+}
+
+.bootstrap-dark #rteUseCase .control-wrapper .header, .bootstrap5-dark #rteUseCase .control-wrapper .header, .fluent-dark #rteUseCase .control-wrapper .header, 
+.fabric-dark #rteUseCase .control-wrapper .header, .material-dark #rteUseCase .control-wrapper .header, .tailwind-dark #rteUseCase .control-wrapper .header, 
+.highcontrast #rteUseCase .control-wrapper .header,.material3-dark #rteUseCase .control-wrapper .header {
+    color: #fff;    
+}
+
+@media (max-width: 550px) {
+    #rteUseCase .control-wrapper .forum {
+        padding: 20px 20px 60px 20px;
+    }
+}
+
+@media (min-width: 550px) {
+    #rteUseCase .control-wrapper .forum {
+        margin: 0 auto;
+        width: 80%;
+        border: 1px solid #d8d8c0;
+        padding: 10px 90px 60px 90px;
+        box-shadow: 2px 2px 2px 2px #f5f5ef;
+    }
+    .highcontrast #rteUseCase .control-wrapper .forum {
+        border: 1px solid #fff;
+    }
+}
+
+#rteUseCase .control-wrapper .e-like span {
+    font-family: Helvetica, Times New Roman;
+    color: #E3175A;
+    font-size: 12px;
+}
+
+#rteUseCase .control-wrapper .e-dislike span {
+    font-family: Helvetica, Times New Roman;
+    color: #717171;
+    font-size: 12px;
+
+}
+
+#rteUseCase .control-wrapper .detailsQuestion {
+    font-size: 12px;
+    font-family: roboto, SegoeUI;
+    color: #575757;
+    margin-top: 8px;
+}
+
+#rteUseCase .control-wrapper .explain {
+    margin-top: 16px;
+    font-size: 13px;
+    font-family: roboto, SegoeUI;
+    color: #000000;
+}
+
+.bootstrap-dark #rteUseCase .control-wrapper .explain, .bootstrap5-dark #rteUseCase .control-wrapper .explain, .fluent-dark #rteUseCase .control-wrapper .explain, 
+.fabric-dark #rteUseCase .control-wrapper .explain, .material-dark #rteUseCase .control-wrapper .explain, .tailwind-dark #rteUseCase .control-wrapper .explain, 
+.highcontrast #rteUseCase .control-wrapper .explain,.material3-dark #rteUseCase .control-wrapper .explain {
+    color: #fff;
+}
+
+#rteUseCase .control-wrapper .separator {
+    margin-top: 5px;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 5px;
+}
+
+#rteUseCase .control-wrapper .tags td:first-child div {
+    margin-left: 0px;
+}
+
+#rteUseCase .control-wrapper .tag {
+    color: #000000;
+    padding: 3px 14px;
+    background-color: #DDDDDD;
+    font-size: 13px;
+    margin-left: 8px;
+    border-radius: 6px;
+    float: left;
+    text-transform: lowercase;
+    font-family: roboto, SegoeUI;
+}
+
+#rteUseCase .control-wrapper .answerCount {
+    color: #575757;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: roboto-Semibold, SegoeUI-Semibold;
+    width: 63px;
+}
+
+#rteUseCase .control-wrapper .likeAnswer {
+    margin-top: 13px;
+}
+
+#rteUseCase .control-wrapper .tags {
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+#rteUseCase .control-wrapper .questionar {
+    background: url(/nextjs/demos/images/rich-text-editor/emp1.png);
+    margin-top: 2px;
+}
+
+#rteUseCase .control-wrapper .raiser {
+    height: 34px;
+}
+
+#rteUseCase .control-wrapper .Questionarname {
+    margin-top: 13px;
+    float: left;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#rteUseCase .control-wrapper .your-answer {
+    color: #3b3b3b;
+    font-weight: 300;
+}
+
+#rteUseCase .control-wrapper .rating {
+    padding-left: 10px;
+    margin-top: -95px;
+}
+
+#rteUseCase .control-wrapper .logos {
+    background: url(/nextjs/demos/images/rich-text-editor/emp2.png);
+}
+
+#rteUseCase .control-wrapper .logo {
+    background: url(/nextjs/demos/images/rich-text-editor/author.png) no-repeat scroll 0 0 transparent;
+}
+
+#rteUseCase .control-wrapper .emp1 {
+    background: url(/nextjs/demos/images/rich-text-editor/1.png) no-repeat scroll 0 0 transparent;
+}
+
+#rteUseCase .control-wrapper .emp2 {
+    background: url(/nextjs/demos/images/rich-text-editor/2.png) no-repeat scroll 0 0 transparent;
+}
+
+#rteUseCase .control-wrapper .emp3 {
+    background: url(/nextjs/demos/images/rich-text-editor/3.png) no-repeat scroll 0 0 transparent;
+}
+
+ #rteUseCase .control-wrapper .blog-avatar{
+    height: 32px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #bcbcbc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    color: #fff;
+    width: 32px;
+}
+
+#rteUseCase .control-wrapper .author {
+    margin-bottom: 5px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#rteUseCase .control-wrapper .name {
+    margin: 5px;
+    float: left;
+    color: blue;
+}
+
+#rteUseCase .control-wrapper .posting {
+    clear: both;
+    color: #000;
+    line-height: 24px;
+    margin-top: 12px;
+    font-family: roboto, SegoeUI;
+    font-size: 13px;
+    overflow-wrap: break-word;
+}
+
+.bootstrap-dark #rteUseCase .control-wrapper .posting, .bootstrap5-dark #rteUseCase .control-wrapper .posting, .fluent-dark #rteUseCase .control-wrapper .posting, 
+.fabric-dark #rteUseCase .control-wrapper .posting, .material-dark #rteUseCase .control-wrapper .posting, .tailwind-dark #rteUseCase .control-wrapper .posting, 
+.highcontrast #rteUseCase .control-wrapper .posting,.material3-dark #rteUseCase .control-wrapper .posting {
+    color: #fff;
+}
+
+#rteUseCase .control-wrapper .authorname {
+    font-family: SegoeUI-Semibold;
+    color: #000000;
+    font-size: 13px;
+}
+
+.bootstrap-dark #rteUseCase .control-wrapper .authorname, .bootstrap5-dark #rteUseCase .control-wrapper .authorname, .fluent-dark #rteUseCase .control-wrapper .authorname, 
+.fabric-dark #rteUseCase .control-wrapper .authorname, .material-dark #rteUseCase .control-wrapper .authorname, .tailwind-dark #rteUseCase .control-wrapper .authorname, 
+.highcontrast #rteUseCase .control-wrapper .authorname,.material3-dark #rteUseCase .control-wrapper .authorname {
+    color: #fff;
+}
+
+#rteUseCase .control-wrapper .detailsAnswer {
+    color: #575757;
+    font-size: 12px;
+    font-family: roboto, SegoeUI;
+    margin-top: 7px;
+}
+
+#rteUseCase .control-wrapper #buttonSection {
+    float: right;
+    margin-top: 11px;
+
+}
+
+#rteUseCase .control-wrapper #buttonSection button {
+    margin-right: 11px;
+}
+
+#rteUseCase .control-wrapper .authorname,
+#rteUseCase .control-wrapper .detailsAnswer {
+    margin-left: 11px;
+}
+
+#rteUseCase .control-wrapper .answerCount {
+    color: #76766f;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+#rteUseCase .control-wrapper .questDesc {
+    min-height: 120px;
+    width: 100%;
+}
+
+#rteUseCase .control-wrapper .answerHeader {
+    border-bottom: 1px solid #ced1d1;
+    margin-bottom: 20px;
+    margin-top: -40px;
+}
+
+#rteUseCase .control-wrapper .answer {
+    margin-top: 15px;
+}
+
+#rteUseCase .control-wrapper .editorholder h4 {
+    padding: 15px 0;
+}
+
+#rteUseCase .control-wrapper #createpostholder {
+    margin-top: 25px;
+}
+
+#rteUseCase .e-richtexteditor .e-rte-content .e-content {
+    float: left;
+    width: 100%;
+}
+
+#rteUseCase .content-wrapper {
+    width: auto;
+    margin: 0;
+}
+.bootstrap-dark #rteUseCase .control-wrapper .tag,
+.bootstrap5-dark #rteUseCase .control-wrapper .tag, 
+.fluent-dark #rteUseCase .control-wrapper .tag,
+.material3-dark #rteUseCase .control-wrapper .tag,
+.fabric-dark #rteUseCase .control-wrapper .tag, 
+.material-dark #rteUseCase .control-wrapper .tag, 
+.tailwind-dark #rteUseCase .control-wrapper .tag, 
+.highcontrast #rteUseCase .control-wrapper .tag{
+    color: #fff;
+    background: #484644;
+}   

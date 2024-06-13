@@ -1,0 +1,43 @@
+.upload_wrapper, .rtl_wrapper,.validation_wrapper {
+    max-width: 400px;
+	margin: auto;
+}
+
+.upload_wrapper .e-upload, .rtl_wrapper .e-upload, .validation_wrapper .e-upload {
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.upload_wrapper .e-upload .e-upload-drag-hover, .rtl_wrapper .e-upload .e-upload-drag-hover,  .validation_wrapper .e-upload .e-upload-drag-hover {
+    margin: 0;
+}
+
+#uploader .property-panel-content {
+    min-height: 200px;
+}
+
+.property-section.preload-panel .property-panel-section {
+    position: relative;
+    padding-left: 30px;
+}
+.e-bigger .property-section.preload-panel {
+	position: relative;
+    padding-left: 35px;
+}
+.property-section .chunk-table {
+    width: 100%;
+    margin-top: 15px;
+}
+.chunk-td {
+    width: 50%;
+}
+
+.default-check {
+    margin-left: 50px;
+    padding-top: 25px;
+}
+
+.panel-style {
+    padding-top: 25px;
+}

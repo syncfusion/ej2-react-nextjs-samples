@@ -1,0 +1,76 @@
+.ajaxcontent .e-dialog .e-dlg-header >img.img1 {
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.bootstrap .ajaxcontent .e-dialog .e-dlg-header >img.img1 {
+    margin-top: 1px;
+}
+.tailwind .ajaxcontent .e-dialog .e-dlg-header >img.img1,
+.tailwind-dark .ajaxcontent .e-dialog .e-dlg-header >img.img1,
+.bootstrap5 .ajaxcontent .e-dialog .e-dlg-header >img.img1,
+.bootstrap5-dark .ajaxcontent .e-dialog .e-dlg-header >img.img1,
+.bootstrap4 .ajaxcontent .e-dialog .e-dlg-header >img.img1 {
+    margin-top: 0px;
+}
+
+.fabric .ajaxcontent .e-dialog, .bootstrap .ajaxcontent .e-dialog {
+    height: 329px;
+}
+.highcontrast .ajaxcontent .e-dialog {
+    height: 345px;
+}
+.material .ajaxcontent .e-dialog {
+    height: 265px;
+}
+.material.e-bigger .ajaxcontent .e-dialog {
+    height: 285px;
+}
+.ajaxcontent .e-footer-content button.e-control.e-btn.e-flat {
+    width: 100%
+}
+.ajaxcontent .e-dialog .e-footer-content .e-btn {
+    margin-left: 0px;
+}
+
+.ajaxcontent .e-dlg-header-content {
+   min-height: 65px; 
+}
+
+.tailwind .ajaxcontent .e-dlg-header-content,
+.tailwind-dark .ajaxcontent .e-dlg-header-content,
+.bootstrap5 .ajaxcontent .e-dlg-header-content,
+.bootstrap5-dark .ajaxcontent .e-dlg-header-content {
+   min-height: 50px; 
+}
+
+.bootstrap4 .ajaxcontent .e-dlg-header-content {
+   min-height: 50px; 
+}
+
+.ajaxcontent .e-btn .e-btn-icon{
+  margin-top: -14px;
+}
+#target {
+    height: 100%;
+    min-height: 350px;
+}
+.ajaxcontent .e-dialog .e-icon-dlg-close::before{
+    top: 6px;
+}
+.ajaxcontent .e-footer-content button.e-control.e-btn.e-flat {
+    width: initial;
+}
+
+
+@media screen and (min-width: 150px) and (max-width: 480px) {
+.control-section{
+    margin-bottom: 30px;
+}
+.control-wrapper{
+        margin-bottom: 0px;
+}
+
+}

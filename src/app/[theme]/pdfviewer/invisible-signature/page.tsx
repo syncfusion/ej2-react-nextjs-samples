@@ -8,7 +8,6 @@ import {
 } from '@syncfusion/ej2-react-pdfviewer';
 import { MessageComponent } from '@syncfusion/ej2-react-notifications';
 import { ToolbarComponent, ItemsDirective, ItemDirective, ClickEventArgs } from '@syncfusion/ej2-react-navigations';
-import { updateSampleSection } from '../common/sample-base';
 import { useState } from 'react';
 import '../pdf.component.css';
 function InvisibleDigitalSignature() {

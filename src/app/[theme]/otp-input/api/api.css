@@ -1,0 +1,17 @@
+#otp-container {
+    width: 240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.property-panel-content td {
+    padding: 10px 0px;
+    width: 35%;
+}
+
+.property-styles {
+    font-weight: 400;
+}

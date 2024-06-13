@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/nextjs/demos',
+    basePath: process.env.NEXT_PUBLIC_BASE_PATH,
     async redirects() {
         return [
             {
                 source: '/',
-                destination: '/material3/grid/overview',
+                destination: '/fluent2/grid/overview',
                 permanent: true,
             },
         ]

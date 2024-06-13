@@ -1,0 +1,142 @@
+/* Listview Customization */
+
+#letterAvatarList {
+    max-width: 350px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+body.material #letterAvatarList,
+body.material-dark #letterAvatarList,
+body.fabric #letterAvatarList,
+body.fabric-dark #letterAvatarList,
+body.bootstrap #letterAvatarList,
+body.bootstrap-dark #letterAvatarList,
+body.highcontrast #letterAvatarList{
+    border: 1px solid #dddddd;
+}
+
+.fluent #letterAvatarList .e-list-item,
+.fluent-dark #letterAvatarList .e-list-item{
+		line-height: 30px;
+}
+
+#letterAvatarList .listWrapper {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+#letterAvatarList .e-list-header {
+    height: 54px;
+}
+
+.material3 #letterAvatarList .e-list-header .e-text,
+.material3-dark #letterAvatarList .e-list-header .e-text,
+.material #letterAvatarList .e-list-header .e-text,
+.fabric #letterAvatarList .e-list-header .e-text {
+    line-height: 22px;
+}
+
+.bootstrap #letterAvatarList .e-list-header .e-text {
+    line-height: 13px;
+}
+
+.highcontrast #letterAvatarList .e-list-header .e-text {
+    line-height: 20px;
+}
+
+body.tailwind-dark #letterAvatarList .e-list-item{
+    line-height: 35px;
+}
+
+.material3 #letterAvatarList .e-list-item,
+.material3-dark #letterAvatarList .e-list-item,
+.tailwind #letterAvatarList .e-list-item,
+body.material #letterAvatarList .e-list-item,
+body.material-dark #letterAvatarList .e-list-item {
+    line-height: 50px;
+}
+
+#letterAvatarList .e-list-item {
+    cursor: pointer;
+    height: 50px;
+    line-height: 44px;
+    border: 0;
+}
+
+.material3 #letterAvatarList .e-list-item,
+.material3-dark #letterAvatarList .e-list-item,
+.tailwind #letterAvatarList .e-list-item {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Badge Positioning */
+
+#letterAvatarList .e-badge {
+    margin-top: 12px;
+}
+
+#letterAvatarList .listWrapper .list-text {
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 50px;
+}
+
+/* Avatar Positioning */
+
+#letterAvatarList .listWrapper .e-avatar {
+    position: absolute;
+    font-size: 10px;
+    left: 5px;
+}
+
+/* Avatar Background Customization */
+
+#letterAvatarList .e-list-item:nth-child(1) .e-avatar {
+    background-color: #039BE5;
+}
+
+#letterAvatarList .e-list-item:nth-child(3) .e-avatar {
+    background-color: #E91E63;
+}
+
+#letterAvatarList .e-list-item:nth-child(5) .e-avatar {
+    background-color: #009688;
+}
+
+/* Avatar images using 'background-image' property */
+
+#letterAvatarList .pic01 {
+    background-image: url('/nextjs/demos/images/avatar/pic01.png');
+}
+
+#letterAvatarList .pic02 {
+    background-image: url('/nextjs/demos/images/avatar/pic02.png');
+}
+
+#letterAvatarList .pic03 {
+    background-image: url('/nextjs/demos/images/avatar/pic03.png');
+}
+
+#letterAvatarList .pic04 {
+    background-image: url('/nextjs/demos/images/avatar/pic04.png');
+}
+
+.bootstrap4 #letterAvatarList .e-list-item,
+.bootstrap5 #letterAvatarList .e-list-item,
+.bootstrap5-dark #letterAvatarList .e-list-item {
+    line-height: 30px;
+    padding: 8px 16px 8px 16px;
+}
+
+body.bootstrap4 #letterAvatarList .e-list-item .e-avatar{
+    top: calc(100% - 45px);
+}
+
+body.bootstrap #letterAvatarList .e-list-item,
+body.bootstrap-dark #letterAvatarList .e-list-item {
+    line-height: 45px;
+}
