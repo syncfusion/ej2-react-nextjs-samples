@@ -51,25 +51,26 @@
     "@syncfusion/ej2-react-spreadsheet": "*",
     "@syncfusion/ej2-react-treegrid": "*",
     "@syncfusion/ej2-react-treemap": "*",
-    "moment-timezone": "^0.5.43",
+    "fuse.js": "^7.1.0",
     "marked": "^12.0.2",
-    "next": "14.2.21",
+    "moment-timezone": "^0.5.43",
+    "next": "14.2.32",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@microsoft/signalr": "^7.0.11",
+    "@types/codemirror": "5.60.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/codemirror": "5.60.10",
     "codemirror": "5.65.16",
     "elasticlunr": "^0.9.5",
     "eslint": "^8",
+    "eslint-config-next": "14.2.32",
     "gulp": "^4.0.2",
     "shelljs": "^0.8.5",
-    "eslint-config-next": "14.0.4",
     "typescript": "^5"
   }
 }

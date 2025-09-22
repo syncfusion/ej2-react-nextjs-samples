@@ -71,14 +71,16 @@ gulp.task('sample-list-config', function (done) {
     var apiReference = {};
     var uid = 0;
     for (var file of files) {
+        // Normalize file path to use forward slashes for consistent processing
+        var normalizedFile = file.replace(/\\/g, '/');
         var parsing = parseSamplelist(samplelist);
         var count = Object.keys(parsing).filter(function (value) {
-            if (file.split('/')[2] == parsing[value].path) {
+            if (normalizedFile.split('/')[2] == parsing[value].path) {
                 return value;
             }
         })
         var routeconfig = '';
-        var path = file.slice(0, file.lastIndexOf('/'));
+        var path = normalizedFile.slice(0, normalizedFile.lastIndexOf('/'));
         var compName = path.slice(path.lastIndexOf('/') + 1);
         var curfile = JSON.stringify(fs.readFileSync(file, 'utf8'));
         var trimmedFile = curfile.replace(/\\n|\\r/g, '');
