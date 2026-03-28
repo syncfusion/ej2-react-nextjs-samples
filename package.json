@@ -68,7 +68,7 @@
     "codemirror": "5.65.16",
     "elasticlunr": "^0.9.5",
     "eslint": "^8",
-    "eslint-config-next": "14.2.32",
+    "eslint-config-next": "15.5.14",
     "gulp": "^4.0.2",
     "shelljs": "^0.8.5",
     "typescript": "^5"
